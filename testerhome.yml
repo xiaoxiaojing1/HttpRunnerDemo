@@ -1,0 +1,37 @@
+-   config:
+        name: testset description
+        request:
+            base_url: ''
+            headers:
+                User-Agent: !!python/unicode 'Mozilla/5.0 (Macintosh; Intel Mac OS
+                    X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106
+                    Safari/537.36'
+        variables: []
+-   test:
+        name: !!python/unicode '/'
+        request:
+            headers:
+                !!python/unicode 'If-None-Match': !!python/unicode 'W/"fef801878055833548e8809d6d3b2a58"'
+            method: !!python/unicode 'GET'
+            url: !!python/unicode 'https://testerhome.com/'
+        validate:
+        -   eq:
+            - status_code
+            - 200
+        -   eq:
+            - headers.Content-Type
+            - !!python/unicode 'text/html; charset=utf-8'
+-   test:
+        name: !!python/unicode '/topics/15768'
+        request:
+            headers:
+                !!python/unicode 'Turbolinks-Referrer': !!python/unicode 'https://testerhome.com/'
+            method: !!python/unicode 'GET'
+            url: !!python/unicode 'https://testerhome.com/topics/15768'
+        validate:
+        -   eq:
+            - status_code
+            - 200
+        -   eq:
+            - headers.Content-Type
+            - !!python/unicode 'text/html; charset=utf-8'

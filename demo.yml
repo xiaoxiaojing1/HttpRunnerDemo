@@ -1,0 +1,42 @@
+-   config:
+        name: testset description
+        request:
+            base_url: ''
+            headers:
+                User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36
+                    (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+        variables: []
+
+-   test:
+        name: /
+        request:
+            headers:
+                If-None-Match: W/"2d5f12342e3d9777cb056a26621f8cd9"
+            method: GET
+            url: https://testerhome.com/
+        validate:
+            - eq: [status_code, 200]
+            - eq: [headers.Content-Type, text/html; charset=utf-8]
+
+-   test:
+        name: /favicon-32x32.png
+        request:
+            method: GET
+            url: https://testerhome.com/favicon-32x32.png
+        validate:
+            - eq: [status_code, 200]
+            - eq: [headers.Content-Type, image/png]
+
+-   test:
+        name: /topics/15768
+        request:
+            headers:
+                If-None-Match: W/"89076461abfde5d7e2aacc65b104a7ab"
+                Turbolinks-Referrer: https://testerhome.com/
+            method: GET
+            url: https://testerhome.com/topics/15768
+        extract:
+            - stars: <i class='fa fa-heart'></i> <span>(.*) 个赞</span></a>
+        validate:
+            - eq: [status_code, 200]
+            - eq: [headers.Content-Type, text/html; charset=utf-8]

@@ -1,0 +1,2908 @@
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> - TestReport</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      color: #333;
+      margin: 0 auto;
+      width: 960px;
+    }
+    #summary {
+      width: 960px;
+      margin-bottom: 20px;
+    }
+    #summary th {
+      background-color: skyblue;
+      padding: 5px 12px;
+    }
+    #summary td {
+      background-color: lightblue;
+      text-align: center;
+      padding: 4px 8px;
+    }
+    .details {
+      width: 960px;
+      margin-bottom: 20px;
+    }
+    .details th {
+      background-color: skyblue;
+      padding: 5px 12px;
+    }
+    .details tr .passed {
+      background-color: lightgreen;
+    }
+    .details tr .failed {
+      background-color: red;
+    }
+    .details tr .unchecked {
+      background-color: gray;
+    }
+    .details td {
+      background-color: lightblue;
+      padding: 5px 12px;
+    }
+    .details .detail {
+      background-color: lightgrey;
+      font-size: smaller;
+      padding: 5px 10px;
+      text-align: center;
+    }
+    .details .success {
+      background-color: greenyellow;
+    }
+    .details .error {
+      background-color: red;
+    }
+    .details .failure {
+      background-color: salmon;
+    }
+    .details .skipped {
+      background-color: gray;
+    }
+
+    .button {
+      font-size: 1em;
+      padding: 6px;
+      width: 4em;
+      text-align: center;
+      background-color: #06d85f;
+      border-radius: 20px/50px;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+    }
+    a.button{
+      color: gray;
+      text-decoration: none;
+    }
+    .button:hover {
+      background: #2cffbd;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      transition: opacity 500ms;
+      visibility: hidden;
+      opacity: 0;
+    }
+    .overlay:target {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .popup {
+      margin: 70px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      width: 50%;
+      position: relative;
+      transition: all 3s ease-in-out;
+    }
+
+    .popup h2 {
+      margin-top: 0;
+      color: #333;
+      font-family: Tahoma, Arial, sans-serif;
+    }
+    .popup .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      transition: all 200ms;
+      font-size: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #333;
+    }
+    .popup .close:hover {
+      color: #06d85f;
+    }
+    .popup .content {
+      max-height: 80%;
+      overflow: auto;
+      text-align: left;
+    }
+
+    @media screen and (max-width: 700px) {
+      .box {
+        width: 70%;
+      }
+      .popup {
+        width: 70%;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>Test Report: </h1>
+
+  <h2>Summary</h2>
+  <table id="summary">
+
+    <tr>
+      <th>START AT</th>
+      <td colspan="4">2018-08-27 18:18:55</td>
+    </tr>
+    <tr>
+      <th>DURATION</th>
+      <td colspan="4">0.496 seconds</td>
+    </tr>
+    <tr>
+      <th>PLATFORM</th>
+      <td>HttpRunner 1.5.11 </td>
+      <td>CPython 2.7.15 </td>
+      <td colspan="2">Darwin-17.7.0-x86_64-i386-64bit</td>
+    </tr>
+    <tr>
+      <th>TOTAL</th>
+      <th>SUCCESS</th>
+      <th>FAILED</th>
+      <th>ERROR</th>
+      <th>SKIPPED</th>
+      <!-- <th>ExpectedFailure</th>
+      <th>UnexpectedSuccess</th> -->
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <!-- <td>0</td>
+      <td>0</td> -->
+    </tr>
+  </table>
+
+  <h2>Details</h2>
+
+  
+  
+  <h3>testset description</h3>
+  <table id="suite_1" class="details">
+    <tr>
+      <th>base_url</th>
+      <td colspan="2"></td>
+      <th colspan="2" class="detail">
+        <a class="button" href="#suite_output_1">parameters & output</a>
+        <div id="suite_output_1" class="overlay">
+            <div class="popup">
+                <h2>Parameters and Output</h2>
+                <a class="close" href="#suite_1">&times;</a>
+                <div class="content">
+                  <div style="overflow: auto">
+                      <table>
+                        <tr>
+                          <th>variables</th>
+                          <th>output</th>
+                        </tr>
+                        <tr>
+                          <td>{'integer_types': (<type 'int'>, <type 'long'>)}</td>
+                          <td>{}</td>
+                        </tr>
+                      </table>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>TOTAL: 2</td>
+      <td>SUCCESS: 1</td>
+      <td>FAILED: 0</td>
+      <td>ERROR: 1</td>
+      <td>SKIPPED: 0</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <th colspan="2">Name</th>
+      <th>Response Time</th>
+      <th>Detail</th>
+    </tr>
+
+    
+    
+    <tr id="record_1_1">
+      <th class="success" style="width:5em;">success</td>
+      <td colspan="2">/</td>
+      <td style="text-align:center;width:6em;">304.94 ms</td>
+      <td class="detail">
+
+        <a class="button" href="#popup_log_1_1">log</a>
+        <div id="popup_log_1_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_1">&times;</a>
+
+            <div class="content">
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          https://testerhome.com/
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>if-none-match</strong>: W/"fef801878055833548e8809d6d3b2a58"
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: */*
+                          </div>
+                          
+                          <div>
+                            <strong>user-agent</strong>: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>start_timestamp</th>
+                      <td>
+                        
+                          1535365135.84
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>body</th>
+                      <td>
+                        
+                          None
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          GET
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            <RequestsCookieJar[<Cookie _homeland_session=HXWrhMOIey3E9zZc%2BWdWN260rfNN5XhJTF1eONnbOKjOWQ5rPwkJHbbn7flsfp%2FnA8gUX0cIvvzvi0htTUdcsLi3V1NzzbQXXTFfE6mssE%2FRcuFLDP4O%2Bt2elNKPaXNuBq4NgBKGcjlzeXqJNVvweKGFubKLZmIHYD%2Ft1O4rY2wgP6qg7WoXuXyprQ6uU413CmpI5FZgimr66goryH9Jb8o%2BN0hwJ7OtpocWqIYtIHF3PpqWt0mIbkehqdhT1w8uaWJqs59w3Ju7nlrS29iysrF0rezn7Sa9zg%3D%3D--Tllj5lhnAD%2Fdie4k--S2HuI1AcVzl3PcDnPHRdNQ%3D%3D for testerhome.com/>, <Cookie user_id=bnVsbA%3D%3D--26c1ccfd51118ea112eac0447589c466425bcd38 for testerhome.com/>]>
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            utf-8
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                        
+                      
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            OK
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                        
+                      
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            https://testerhome.com/
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                        
+                      
+                      <tr>
+                        <th>content</th>
+                        <td>
+                          
+                            
+                              <pre>&lt;!--
+   _   _                      _                 _
+  | | | |                    | |               | |
+  | |_| | ___  _ __ ___   ___| | __ _ _ __   __| |
+  |  _  |/ _ \| &#39;_ ` _ \ / _ \ |/ _` | &#39;_ \ / _` |
+  | | | | (_) | | | | | |  __/ | (_| | | | | (_| |
+  \_| |_/\___/|_| |_| |_|\___|_|\__,_|_| |_|\__,_|
+  ------------------------------------------------
+                          https://gethomeland.com
+
+  - Ruby:  2.4.0-p0
+  - Rails: 5.2.0.rc1
+  - Homeland: 3.1.0.beta9
+--&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&#39;utf-8&#39; /&gt;
+  &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&#34; /&gt;
+  &lt;meta name=&#34;keywords&#34; content=&#34;移动测试,游戏测试,性能测试,软件测试,软件测试社区,软件测试资料,软件测试工具,软件测试报告,软件测试方法,自动化测试,软件测试招聘,&#34;&gt;
+  &lt;meta name=&#34;description&#34; content=&#34;TesterHome软件测试社区，人气最旺的软件测试技术门户，提供软件测试社区交流，测试沙龙。&#34;&gt;
+  &lt;title&gt;TesterHome&lt;/title&gt;
+  &lt;link rel=&#34;icon&#34; href=&#34;/assets/favicon-cd32144f74c18746f3dce33e1040e7dfe4c07c8e611e37f3868b1c16b5095da3.png&#34; /&gt;
+  &lt;link rel=&#34;apple-touch-icon-precomposed&#34; href=&#34;/assets/ios-icon-cd32144f74c18746f3dce33e1040e7dfe4c07c8e611e37f3868b1c16b5095da3.png&#34; /&gt;
+  &lt;link rel=&#34;shortcut icon&#34; href=&#34;/assets/big_logo-cd32144f74c18746f3dce33e1040e7dfe4c07c8e611e37f3868b1c16b5095da3.png&#34; /&gt;
+  &lt;link rel=&#34;apple-touch-icon&#34; href=&#34;/assets/favicon-cd32144f74c18746f3dce33e1040e7dfe4c07c8e611e37f3868b1c16b5095da3.png&#34;&gt;
+
+  &lt;!-- http://www.favicon-generator.org/ --&gt;
+  &lt;link rel=&#34;apple-touch-icon&#34; sizes=&#34;57x57&#34; href=&#34;/apple-icon-57x57.png&#34;&gt;
+  &lt;link rel=&#34;apple-touch-icon&#34; sizes=&#34;60x60&#34; href=&#34;/apple-icon-60x60.png&#34;&gt;
+  &lt;link rel=&#34;apple-touch-icon&#34; sizes=&#34;72x72&#34; href=&#34;/apple-icon-72x72.png&#34;&gt;
+  &lt;link rel=&#34;apple-touch-icon&#34; sizes=&#34;76x76&#34; href=&#34;/apple-icon-76x76.png&#34;&gt;
+  &lt;link rel=&#34;apple-touch-icon&#34; sizes=&#34;114x114&#34; href=&#34;/apple-icon-114x114.png&#34;&gt;
+  &lt;link rel=&#34;apple-touch-icon&#34; sizes=&#34;120x120&#34; href=&#34;/apple-icon-120x120.png&#34;&gt;
+  &lt;link rel=&#34;apple-touch-icon&#34; sizes=&#34;144x144&#34; href=&#34;/apple-icon-144x144.png&#34;&gt;
+  &lt;link rel=&#34;apple-touch-icon&#34; sizes=&#34;152x152&#34; href=&#34;/apple-icon-152x152.png&#34;&gt;
+  &lt;link rel=&#34;apple-touch-icon&#34; sizes=&#34;180x180&#34; href=&#34;/apple-icon-180x180.png&#34;&gt;
+  &lt;link rel=&#34;icon&#34; type=&#34;image/png&#34; sizes=&#34;192x192&#34;  href=&#34;/android-icon-192x192.png&#34;&gt;
+  &lt;link rel=&#34;icon&#34; type=&#34;image/png&#34; sizes=&#34;32x32&#34; href=&#34;/favicon-32x32.png&#34;&gt;
+  &lt;link rel=&#34;icon&#34; type=&#34;image/png&#34; sizes=&#34;96x96&#34; href=&#34;/favicon-96x96.png&#34;&gt;
+  &lt;link rel=&#34;icon&#34; type=&#34;image/png&#34; sizes=&#34;16x16&#34; href=&#34;/favicon-16x16.png&#34;&gt;
+  &lt;link rel=&#34;manifest&#34; href=&#34;/manifest.json&#34;&gt;
+  &lt;meta name=&#34;msapplication-TileColor&#34; content=&#34;#ffffff&#34;&gt;
+  &lt;meta name=&#34;msapplication-TileImage&#34; content=&#34;/ms-icon-144x144.png&#34;&gt;
+  &lt;meta name=&#34;theme-color&#34; content=&#34;#ffffff&#34;&gt;
+
+  &lt;meta name=&#34;apple-mobile-web-app-capable&#34; content=&#34;no&#34;&gt;
+  &lt;meta content=&#39;True&#39; name=&#39;HandheldFriendly&#39; /&gt;
+  &lt;link rel=&#34;alternate&#34; type=&#34;application/rss+xml&#34; title=&#34;订阅最新帖&#34; href=&#34;https://testerhome.com/topics/feed&#34; /&gt;
+  &lt;link rel=&#34;stylesheet&#34; media=&#34;screen&#34; href=&#34;/assets/front-2891f990fa6722ecffe4b663563893077ec94d95c8ab07ad3b281449eddd0198.css&#34; data-turbolinks-track=&#34;reload&#34; /&gt;
+  
+  
+  &lt;meta name=&#34;action-cable-url&#34; content=&#34;/cable&#34; /&gt;
+  &lt;meta name=&#34;csrf-param&#34; content=&#34;authenticity_token&#34; /&gt;
+&lt;meta name=&#34;csrf-token&#34; content=&#34;w6Nv4f7sCde5Qt0AqePnujjGoWH59Qvo20SIASv3UTzqYR5MWCs10KQXfSmp+mJC+kNZfhLCB0yqS/azN69Q/g==&#34; /&gt;
+  
+
+  &lt;script src=&#34;/assets/app-f87d5a9a63a121ab8f1df0fcd340e6e4945e35fa9e17b1a4443f265e9d2227ae.js&#34; data-turbolinks-track=&#34;reload&#34;&gt;&lt;/script&gt;
+  
+&lt;/head&gt;
+&lt;body class=&#34;page-home&#34; data-controller-name=&#34;home&#34;&gt;
+  &lt;div class=&#34;header&#34;&gt;
+    &lt;nav class=&#34;navbar navbar-inverse navbar-fixed-top navbar-default&#34;&gt;
+      &lt;div class=&#34;container&#34;&gt;
+        &lt;div class=&#34;navbar-header&#34; id=&#34;navbar-header&#34; data-turbolinks-permanent&gt;
+          &lt;button type=&#34;button&#34; class=&#34;navbar-toggle collapsed&#34; data-toggle=&#34;collapse&#34; data-target=&#34;#main-navbar-collapse&#34;&gt;
+            &lt;span class=&#34;sr-only&#34;&gt;Toggle&lt;/span&gt;
+            &lt;i class=&#34;fa fa-reorder&#34;&gt;&lt;/i&gt;
+          &lt;/button&gt;
+          &lt;a href=&#34;/&#34; class=&#34;navbar-brand&#34;&gt;&lt;b&gt;TesterHome&lt;/b&gt;&lt;/a&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&#34;collapse navbar-collapse&#34; id=&#34;main-navbar-collapse&#34;&gt;
+          
+          &lt;div id=&#34;main-nav-menu&#34;&gt;
+  &lt;ul class=&#34;nav navbar-nav&#34;&gt;
+    &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/topics&#34;&gt;社区&lt;/a&gt;&lt;/li&gt;&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/bugs&#34;&gt;Bug 曝光台&lt;/a&gt;&lt;/li&gt;&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/questions&#34;&gt;问答&lt;/a&gt;&lt;/li&gt;&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/teams&#34;&gt;社团&lt;/a&gt;&lt;/li&gt;&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/jobs&#34;&gt;招聘&lt;/a&gt;&lt;/li&gt;&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/wiki&#34;&gt;Wiki&lt;/a&gt;&lt;/li&gt;&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/opensource_projects&#34;&gt;开源项目&lt;span class=&#34;badge-new&#34;&gt;新&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/sites&#34;&gt;酷站&lt;/a&gt;&lt;/li&gt;
+    
+  &lt;/ul&gt;
+&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;ul class=&#34;nav user-bar navbar-nav navbar-right&#34;&gt;
+  &lt;li&gt;&lt;a href=&#34;/account/sign_up&#34;&gt;注册&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;/account/sign_in&#34;&gt;登录&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul class=&#34;nav navbar-nav user-bar navbar-right&#34;&gt;
+  &lt;li class=&#34;nav-search hidden-xs hidden-sm hidden-md&#34;&gt;
+    &lt;form class=&#34;navbar-form form-search active&#34; action=&#34;/search&#34; method=&#34;GET&#34;&gt;
+      &lt;div class=&#34;form-group&#34;&gt;
+        &lt;input class=&#34;form-control&#34; name=&#34;q&#34; type=&#34;text&#34; value=&#34;&#34; placeholder=&#34;搜索本站内容&#34; /&gt;
+      &lt;/div&gt;
+      &lt;i class=&#34;fa btn-search fa-search&#34;&gt;&lt;/i&gt;
+    &lt;/form&gt;
+  &lt;/li&gt;
+
+&lt;/ul&gt;
+
+      &lt;/div&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+
+  
+
+  &lt;div id=&#34;main&#34; class=&#34;main-container container&#34;&gt;
+    
+    
+    
+
+
+&lt;div class=&#34;row&#34;&gt;
+  &lt;div class=&#34;col-md-9 home-main&#34;&gt;
+    
+    
+&lt;div class=&#34;home_suggest_topics panel panel-default&#34;&gt;
+  &lt;div class=&#34;panel-heading&#34;&gt;社区置顶&lt;/div&gt;
+  &lt;div class=&#34;panel-body topics row&#34;&gt;
+    &lt;div class=&#34;col-md-6&#34;&gt;
+          &lt;div class=&#34;topic media topic-10254&#34;&gt;
+  &lt;div class=&#34;avatar media-left&#34;&gt;
+    &lt;a title=&#34;maine&#34; href=&#34;/maine&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/10433/b2db36.jpg!md&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;infos media-body&#34;&gt;
+    &lt;div class=&#34;title media-heading&#34;&gt;
+      &lt;a title=&#34;优质招聘汇总&#34; href=&#34;/topics/10254&#34;&gt;
+        优质招聘汇总
+&lt;/a&gt;        &lt;i class=&#34;fa fa-thumb-tack&#34; title=&#34;置顶&#34;&gt;&lt;/i&gt;
+      &lt;i title=&#34;精华帖&#34; class=&#34;fa fa-diamond&#34; data-toggle=&#34;tooltip&#34;&gt;&lt;/i&gt;
+      
+    &lt;/div&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      &lt;a class=&#34;user-name&#34; data-name=&#34;&#34; href=&#34;/maine&#34;&gt;maine&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;count media-right&#34;&gt;
+      &lt;a class=&#34;state-false&#34; href=&#34;/topics/10254#reply-119063&#34;&gt;60&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;topic media topic-15741&#34;&gt;
+  &lt;div class=&#34;avatar media-left&#34;&gt;
+    &lt;a title=&#34;Lihuazhang (恒温)&#34; href=&#34;/Lihuazhang&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/110.jpg!md&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;infos media-body&#34;&gt;
+    &lt;div class=&#34;title media-heading&#34;&gt;
+      &lt;a title=&#34;社区受到恶意注册，新用户只允许 github 登录，老用户还可以用原来的账密！求技术支持和帮助！&#34; href=&#34;/topics/15741&#34;&gt;
+        社区受到恶意注册，新用户只允许 github 登录，老用户还可以用原来的账密！求技术支持和帮助！
+&lt;/a&gt;        &lt;i class=&#34;fa fa-thumb-tack&#34; title=&#34;置顶&#34;&gt;&lt;/i&gt;
+      
+      
+    &lt;/div&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      &lt;a class=&#34;user-name&#34; data-name=&#34;恒温&#34; href=&#34;/Lihuazhang&#34;&gt;Lihuazhang&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;count media-right&#34;&gt;
+      &lt;a class=&#34;state-false&#34; href=&#34;/topics/15741#reply-118999&#34;&gt;26&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&#34;col-md-6&#34;&gt;
+          &lt;div class=&#34;topic media topic-15796&#34;&gt;
+  &lt;div class=&#34;avatar media-left&#34;&gt;
+    &lt;a title=&#34;simple&#34; href=&#34;/simple&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/50.jpg!md&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;infos media-body&#34;&gt;
+    &lt;div class=&#34;title media-heading&#34;&gt;
+      &lt;a title=&#34;[书香活动第一期] 予人玫瑰，手有余香&#34; href=&#34;/topics/15796&#34;&gt;
+        [书香活动第一期] 予人玫瑰，手有余香
+&lt;/a&gt;        &lt;i class=&#34;fa fa-thumb-tack&#34; title=&#34;置顶&#34;&gt;&lt;/i&gt;
+      
+      
+    &lt;/div&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      &lt;a class=&#34;user-name&#34; data-name=&#34;&#34; href=&#34;/simple&#34;&gt;simple&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;count media-right&#34;&gt;
+      &lt;a class=&#34;state-false&#34; href=&#34;/topics/15796#reply-119057&#34;&gt;8&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;topic media topic-15719&#34;&gt;
+  &lt;div class=&#34;avatar media-left&#34;&gt;
+    &lt;a title=&#34;mtdptech (美团点评)&#34; href=&#34;/mtdptech&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/22187/894d2b.png!md&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;infos media-body&#34;&gt;
+    &lt;div class=&#34;title media-heading&#34;&gt;
+      &lt;a title=&#34;美团技术沙龙北京站：美团金融千万级交易系统质量保障之路&#34; href=&#34;/topics/15719&#34;&gt;
+        美团技术沙龙北京站：美团金融千万级交易系统质量保障之路
+&lt;/a&gt;        &lt;i class=&#34;fa fa-thumb-tack&#34; title=&#34;置顶&#34;&gt;&lt;/i&gt;
+      
+      
+    &lt;/div&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      &lt;a class=&#34;user-name&#34; data-name=&#34;美团点评&#34; href=&#34;/mtdptech&#34;&gt;mtdptech&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;count media-right&#34;&gt;
+      &lt;a class=&#34;state-false&#34; href=&#34;/topics/15719#reply-119026&#34;&gt;10&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&#34;home_suggest_topics panel panel-default&#34;&gt;
+  &lt;div class=&#34;panel-heading&#34;&gt;
+    最新帖子
+    &lt;div class=&#34;pull-right&#34;&gt;
+      &lt;a href=&#34;/topics/last&#34;&gt;查看更多...&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;panel-body topics row&#34;&gt;
+    &lt;div class=&#34;col-md-6&#34;&gt;
+          &lt;div class=&#34;topic media topic-15859&#34;&gt;
+  &lt;div class=&#34;avatar media-left&#34;&gt;
+    &lt;a title=&#34;anonymous (匿名)&#34; href=&#34;/anonymous&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/12.jpg!md&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;infos media-body&#34;&gt;
+    &lt;div class=&#34;title media-heading&#34;&gt;
+      &lt;a title=&#34;对测试人员会一点技术说句中肯的话&#34; href=&#34;/topics/15859&#34;&gt;
+        对测试人员会一点技术说句中肯的话
+&lt;/a&gt;      
+      
+    &lt;/div&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      &lt;a class=&#34;user-name&#34; data-name=&#34;匿名&#34; href=&#34;/anonymous&#34;&gt;anonymous&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;count media-right&#34;&gt;
+      &lt;a class=&#34;state-false&#34; href=&#34;/topics/15859#reply-119076&#34;&gt;17&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;topic media topic-15856&#34;&gt;
+  &lt;div class=&#34;avatar media-left&#34;&gt;
+    &lt;a title=&#34;wzhfeianei (毛毛是条爬虫)&#34; href=&#34;/wzhfeianei&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/26362/57693e.jpg!md&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;infos media-body&#34;&gt;
+    &lt;div class=&#34;title media-heading&#34;&gt;
+      &lt;a title=&#34;Jmeter 接口自动化框架 (三) Jenkins 的相关配置&#34; href=&#34;/topics/15856&#34;&gt;
+        Jmeter 接口自动化框架 (三) Jenkins 的相关配置
+&lt;/a&gt;      
+      
+    &lt;/div&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      &lt;a class=&#34;user-name&#34; data-name=&#34;毛毛是条爬虫&#34; href=&#34;/wzhfeianei&#34;&gt;wzhfeianei&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;count media-right&#34;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;topic media topic-15853&#34;&gt;
+  &lt;div class=&#34;avatar media-left&#34;&gt;
+    &lt;a title=&#34;fangminhe (测试无敌)&#34; href=&#34;/fangminhe&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/36701/545095.jpg!md&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;infos media-body&#34;&gt;
+    &lt;div class=&#34;title media-heading&#34;&gt;
+      &lt;a title=&#34;测试管理工具 TestCenter V5.7 新版本功能上线预告&#34; href=&#34;/topics/15853&#34;&gt;
+        测试管理工具 TestCenter V5.7 新版本功能上线预告
+&lt;/a&gt;      
+      
+    &lt;/div&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      &lt;a class=&#34;user-name&#34; data-name=&#34;测试无敌&#34; href=&#34;/fangminhe&#34;&gt;fangminhe&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;count media-right&#34;&gt;
+      &lt;a class=&#34;state-false&#34; href=&#34;/topics/15853#reply-119035&#34;&gt;7&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&#34;col-md-6&#34;&gt;
+          &lt;div class=&#34;topic media topic-15862&#34;&gt;
+  &lt;div class=&#34;avatar media-left&#34;&gt;
+    &lt;a title=&#34;zhang1fan (CN_3604)&#34; href=&#34;/zhang1fan&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/16869/970147.png!md&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;infos media-body&#34;&gt;
+    &lt;div class=&#34;title media-heading&#34;&gt;
+      &lt;a title=&#34;Python 的 32 位和 64 位的区别在哪？有没有必要分那么清楚？&#34; href=&#34;/topics/15862&#34;&gt;
+        Python 的 32 位和 64 位的区别在哪？有没有必要分那么清楚？
+&lt;/a&gt;      
+      
+    &lt;/div&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      &lt;a class=&#34;user-name&#34; data-name=&#34;CN_3604&#34; href=&#34;/zhang1fan&#34;&gt;zhang1fan&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;count media-right&#34;&gt;
+      &lt;a class=&#34;state-false&#34; href=&#34;/topics/15862#reply-119066&#34;&gt;1&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;topic media topic-15858&#34;&gt;
+  &lt;div class=&#34;avatar media-left&#34;&gt;
+    &lt;a title=&#34;_sophie (测试新手)&#34; href=&#34;/_sophie&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/30280/2ba13a.jpg!md&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;infos media-body&#34;&gt;
+    &lt;div class=&#34;title media-heading&#34;&gt;
+      &lt;a title=&#34;大家都用的什么软件管理测试用例？&#34; href=&#34;/topics/15858&#34;&gt;
+        大家都用的什么软件管理测试用例？
+&lt;/a&gt;      
+      
+    &lt;/div&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      &lt;a class=&#34;user-name&#34; data-name=&#34;测试新手&#34; href=&#34;/_sophie&#34;&gt;_sophie&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;count media-right&#34;&gt;
+      &lt;a class=&#34;state-false&#34; href=&#34;/topics/15858#reply-119072&#34;&gt;5&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;topic media topic-15855&#34;&gt;
+  &lt;div class=&#34;avatar media-left&#34;&gt;
+    &lt;a title=&#34;Magdalene (Magdalene)&#34; href=&#34;/Magdalene&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/25354/4f262d.jpg!md&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;infos media-body&#34;&gt;
+    &lt;div class=&#34;title media-heading&#34;&gt;
+      &lt;a title=&#34;网站自动化测试项目示例&#34; href=&#34;/topics/15855&#34;&gt;
+        网站自动化测试项目示例
+&lt;/a&gt;      
+      
+    &lt;/div&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      &lt;a class=&#34;user-name&#34; data-name=&#34;Magdalene&#34; href=&#34;/Magdalene&#34;&gt;Magdalene&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;count media-right&#34;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;home_suggest_topics panel panel-default&#34;&gt;
+  &lt;div class=&#34;panel-heading&#34;&gt;
+    社区精华帖
+    &lt;div class=&#34;pull-right&#34;&gt;
+      &lt;a href=&#34;/topics/excellent&#34;&gt;查看更多精华帖...&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;panel-body topics row&#34;&gt;
+        &lt;div class=&#34;col-md-6 topics-group&#34;&gt;
+          &lt;div class=&#34;topic media topic-15817&#34;&gt;
+  &lt;div class=&#34;avatar media-left&#34;&gt;
+    &lt;a title=&#34;raowm520 (炜)&#34; href=&#34;/raowm520&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/1228/2326e3.jpg!md&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;infos media-body&#34;&gt;
+    &lt;div class=&#34;title media-heading&#34;&gt;
+      &lt;a title=&#34;chrome devtools protocol——Web 性能自动化实践介绍&#34; href=&#34;/topics/15817&#34;&gt;
+        chrome devtools protocol——Web 性能自动化实践介绍
+&lt;/a&gt;      &lt;i title=&#34;精华帖&#34; class=&#34;fa fa-diamond&#34; data-toggle=&#34;tooltip&#34;&gt;&lt;/i&gt;
+      
+    &lt;/div&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      &lt;a class=&#34;user-name&#34; data-name=&#34;炜&#34; href=&#34;/raowm520&#34;&gt;raowm520&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;count media-right&#34;&gt;
+      &lt;a class=&#34;state-false&#34; href=&#34;/topics/15817#reply-118914&#34;&gt;2&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;topic media topic-15752&#34;&gt;
+  &lt;div class=&#34;avatar media-left&#34;&gt;
+    &lt;a title=&#34;success (hello)&#34; href=&#34;/success&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/7064.jpg!md&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;infos media-body&#34;&gt;
+    &lt;div class=&#34;title media-heading&#34;&gt;
+      &lt;a title=&#34;IOS 模拟器多开集成测试和那些坑&#34; href=&#34;/topics/15752&#34;&gt;
+        IOS 模拟器多开集成测试和那些坑
+&lt;/a&gt;      &lt;i title=&#34;精华帖&#34; class=&#34;fa fa-diamond&#34; data-toggle=&#34;tooltip&#34;&gt;&lt;/i&gt;
+      
+    &lt;/div&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      &lt;a class=&#34;user-name&#34; data-name=&#34;hello&#34; href=&#34;/success&#34;&gt;success&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;count media-right&#34;&gt;
+      &lt;a class=&#34;state-false&#34; href=&#34;/topics/15752#reply-118755&#34;&gt;6&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;topic media topic-15561&#34;&gt;
+  &lt;div class=&#34;avatar media-left&#34;&gt;
+    &lt;a title=&#34;wangpengfei100&#34; href=&#34;/wangpengfei100&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/16478/021124.png!md&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;infos media-body&#34;&gt;
+    &lt;div class=&#34;title media-heading&#34;&gt;
+      &lt;a title=&#34;在树莓派上安装 airtest 踩坑记&#34; href=&#34;/topics/15561&#34;&gt;
+        在树莓派上安装 airtest 踩坑记
+&lt;/a&gt;      &lt;i title=&#34;精华帖&#34; class=&#34;fa fa-diamond&#34; data-toggle=&#34;tooltip&#34;&gt;&lt;/i&gt;
+      
+    &lt;/div&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      &lt;a class=&#34;user-name&#34; data-name=&#34;&#34; href=&#34;/wangpengfei100&#34;&gt;wangpengfei100&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;count media-right&#34;&gt;
+      &lt;a class=&#34;state-false&#34; href=&#34;/topics/15561#reply-118949&#34;&gt;13&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;topic media topic-15539&#34;&gt;
+  &lt;div class=&#34;avatar media-left&#34;&gt;
+    &lt;a title=&#34;alexknight (李雷雷)&#34; href=&#34;/alexknight&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/10110/249fe8.jpg!md&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;infos media-body&#34;&gt;
+    &lt;div class=&#34;title media-heading&#34;&gt;
+      &lt;a title=&#34;基于 LifecycleCallbacks 的 Activity/Fragment 页面加载的耗时统计 (附实现)&#34; href=&#34;/topics/15539&#34;&gt;
+        基于 LifecycleCallbacks 的 Activity/Fragment 页面加载的耗时统计 (附实现)
+&lt;/a&gt;      &lt;i title=&#34;精华帖&#34; class=&#34;fa fa-diamond&#34; data-toggle=&#34;tooltip&#34;&gt;&lt;/i&gt;
+      
+    &lt;/div&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      &lt;a class=&#34;user-name&#34; data-name=&#34;李雷雷&#34; href=&#34;/alexknight&#34;&gt;alexknight&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;count media-right&#34;&gt;
+      &lt;a class=&#34;state-false&#34; href=&#34;/topics/15539#reply-118184&#34;&gt;5&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;topic media topic-15374&#34;&gt;
+  &lt;div class=&#34;avatar media-left&#34;&gt;
+    &lt;a title=&#34;sylan215 (sylan215)&#34; href=&#34;/sylan215&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/23518/c9472e.jpg!md&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;infos media-body&#34;&gt;
+    &lt;div class=&#34;title media-heading&#34;&gt;
+      &lt;a title=&#34;不会正确和产品掐架的开发不是好测试&#34; href=&#34;/topics/15374&#34;&gt;
+        不会正确和产品掐架的开发不是好测试
+&lt;/a&gt;      &lt;i title=&#34;精华帖&#34; class=&#34;fa fa-diamond&#34; data-toggle=&#34;tooltip&#34;&gt;&lt;/i&gt;
+      
+    &lt;/div&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      &lt;a class=&#34;user-name&#34; data-name=&#34;sylan215&#34; href=&#34;/sylan215&#34;&gt;sylan215&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;count media-right&#34;&gt;
+      &lt;a class=&#34;state-false&#34; href=&#34;/topics/15374#reply-118192&#34;&gt;26&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;topic media topic-15347&#34;&gt;
+  &lt;div class=&#34;avatar media-left&#34;&gt;
+    &lt;a title=&#34;zyanycall&#34; href=&#34;/zyanycall&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/15561/37ff4e.png!md&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;infos media-body&#34;&gt;
+    &lt;div class=&#34;title media-heading&#34;&gt;
+      &lt;a title=&#34;搞定接口测试变态要求：海量接口返回值对比验证&#34; href=&#34;/topics/15347&#34;&gt;
+        搞定接口测试变态要求：海量接口返回值对比验证
+&lt;/a&gt;      &lt;i title=&#34;精华帖&#34; class=&#34;fa fa-diamond&#34; data-toggle=&#34;tooltip&#34;&gt;&lt;/i&gt;
+      
+    &lt;/div&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      &lt;a class=&#34;user-name&#34; data-name=&#34;&#34; href=&#34;/zyanycall&#34;&gt;zyanycall&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;count media-right&#34;&gt;
+      &lt;a class=&#34;state-false&#34; href=&#34;/topics/15347#reply-118883&#34;&gt;39&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;topic media topic-15197&#34;&gt;
+  &lt;div class=&#34;avatar media-left&#34;&gt;
+    &lt;a title=&#34;simonpatrick (simonpatrick)&#34; href=&#34;/simonpatrick&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/3721.jpg!md&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;infos media-body&#34;&gt;
+    &lt;div class=&#34;title media-heading&#34;&gt;
+      &lt;a title=&#34;使用 JunitPerf 进行性能测试介绍&#34; href=&#34;/topics/15197&#34;&gt;
+        使用 JunitPerf 进行性能测试介绍
+&lt;/a&gt;      &lt;i title=&#34;精华帖&#34; class=&#34;fa fa-diamond&#34; data-toggle=&#34;tooltip&#34;&gt;&lt;/i&gt;
+      
+    &lt;/div&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      &lt;a class=&#34;user-name&#34; data-name=&#34;simonpatrick&#34; href=&#34;/simonpatrick&#34;&gt;simonpatrick&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;count media-right&#34;&gt;
+      &lt;a class=&#34;state-false&#34; href=&#34;/topics/15197#reply-117615&#34;&gt;3&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;topic media topic-14980&#34;&gt;
+  &lt;div class=&#34;avatar media-left&#34;&gt;
+    &lt;a title=&#34;dragonking0318 (爱偷懒的QA)&#34; href=&#34;/dragonking0318&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/1406.jpg!md&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;infos media-body&#34;&gt;
+    &lt;div class=&#34;title media-heading&#34;&gt;
+      &lt;a title=&#34;测试那些儿事&#34; href=&#34;/topics/14980&#34;&gt;
+        测试那些儿事
+&lt;/a&gt;      &lt;i title=&#34;精华帖&#34; class=&#34;fa fa-diamond&#34; data-toggle=&#34;tooltip&#34;&gt;&lt;/i&gt;
+      
+    &lt;/div&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      &lt;a class=&#34;user-name&#34; data-name=&#34;爱偷懒的QA&#34; href=&#34;/dragonking0318&#34;&gt;dragonking0318&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;count media-right&#34;&gt;
+      &lt;a class=&#34;state-false&#34; href=&#34;/topics/14980#reply-119024&#34;&gt;39&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;topic media topic-14913&#34;&gt;
+  &lt;div class=&#34;avatar media-left&#34;&gt;
+    &lt;a title=&#34;nicesunday (一个便利购QA)&#34; href=&#34;/nicesunday&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/19136/f20d67.jpg!md&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;infos media-body&#34;&gt;
+    &lt;div class=&#34;title media-heading&#34;&gt;
+      &lt;a title=&#34;每日优鲜便利购微信小程序集成 Jenkins 生成二维码发版&#34; href=&#34;/topics/14913&#34;&gt;
+        每日优鲜便利购微信小程序集成 Jenkins 生成二维码发版
+&lt;/a&gt;      &lt;i title=&#34;精华帖&#34; class=&#34;fa fa-diamond&#34; data-toggle=&#34;tooltip&#34;&gt;&lt;/i&gt;
+      
+    &lt;/div&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      &lt;a class=&#34;user-name&#34; data-name=&#34;一个便利购QA&#34; href=&#34;/nicesunday&#34;&gt;nicesunday&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;count media-right&#34;&gt;
+      &lt;a class=&#34;state-false&#34; href=&#34;/topics/14913#reply-116595&#34;&gt;13&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;topic media topic-14853&#34;&gt;
+  &lt;div class=&#34;avatar media-left&#34;&gt;
+    &lt;a title=&#34;hbreset (ddfgd)&#34; href=&#34;/hbreset&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/3603.jpg!md&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;infos media-body&#34;&gt;
+    &lt;div class=&#34;title media-heading&#34;&gt;
+      &lt;a title=&#34;持续交付实战&#34; href=&#34;/topics/14853&#34;&gt;
+        持续交付实战
+&lt;/a&gt;      &lt;i title=&#34;精华帖&#34; class=&#34;fa fa-diamond&#34; data-toggle=&#34;tooltip&#34;&gt;&lt;/i&gt;
+      
+    &lt;/div&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      &lt;a class=&#34;user-name&#34; data-name=&#34;ddfgd&#34; href=&#34;/hbreset&#34;&gt;hbreset&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;count media-right&#34;&gt;
+      &lt;a class=&#34;state-false&#34; href=&#34;/topics/14853#reply-118559&#34;&gt;40&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&#34;col-md-6 topics-group&#34;&gt;
+          &lt;div class=&#34;topic media topic-15824&#34;&gt;
+  &lt;div class=&#34;avatar media-left&#34;&gt;
+    &lt;a title=&#34;keithmork (Keith Mo)&#34; href=&#34;/keithmork&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/10693.jpg!md&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;infos media-body&#34;&gt;
+    &lt;div class=&#34;title media-heading&#34;&gt;
+      &lt;a title=&#34;[踩坑总结] nf_conntrack: table full, dropping packet [新]&#34; href=&#34;/topics/15824&#34;&gt;
+        [踩坑总结] nf_conntrack: table full, dropping packet [新]
+&lt;/a&gt;      &lt;i title=&#34;精华帖&#34; class=&#34;fa fa-diamond&#34; data-toggle=&#34;tooltip&#34;&gt;&lt;/i&gt;
+      
+    &lt;/div&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      &lt;a class=&#34;user-name&#34; data-name=&#34;Keith Mo&#34; href=&#34;/keithmork&#34;&gt;keithmork&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;count media-right&#34;&gt;
+      &lt;a class=&#34;state-false&#34; href=&#34;/topics/15824#reply-118920&#34;&gt;1&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;topic media topic-15768&#34;&gt;
+  &lt;div class=&#34;avatar media-left&#34;&gt;
+    &lt;a title=&#34;ycwdaaaa (孙高飞)&#34; href=&#34;/ycwdaaaa&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/7606.jpg!md&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;infos media-body&#34;&gt;
+    &lt;div class=&#34;title media-heading&#34;&gt;
+      &lt;a title=&#34;测试开发之路--UI 自动化常用设计模式&#34; href=&#34;/topics/15768&#34;&gt;
+        测试开发之路--UI 自动化常用设计模式
+&lt;/a&gt;      &lt;i title=&#34;精华帖&#34; class=&#34;fa fa-diamond&#34; data-toggle=&#34;tooltip&#34;&gt;&lt;/i&gt;
+      
+    &lt;/div&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      &lt;a class=&#34;user-name&#34; data-name=&#34;孙高飞&#34; href=&#34;/ycwdaaaa&#34;&gt;ycwdaaaa&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;count media-right&#34;&gt;
+      &lt;a class=&#34;state-false&#34; href=&#34;/topics/15768#reply-118998&#34;&gt;9&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;topic media topic-15562&#34;&gt;
+  &lt;div class=&#34;avatar media-left&#34;&gt;
+    &lt;a title=&#34;zailushang (zailushang)&#34; href=&#34;/zailushang&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/2203/ef9cd1.jpeg!md&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;infos media-body&#34;&gt;
+    &lt;div class=&#34;title media-heading&#34;&gt;
+      &lt;a title=&#34;facebook ATC 弱网测试环境 docker 搭建指南&#34; href=&#34;/topics/15562&#34;&gt;
+        facebook ATC 弱网测试环境 docker 搭建指南
+&lt;/a&gt;      &lt;i title=&#34;精华帖&#34; class=&#34;fa fa-diamond&#34; data-toggle=&#34;tooltip&#34;&gt;&lt;/i&gt;
+      
+    &lt;/div&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      &lt;a class=&#34;user-name&#34; data-name=&#34;zailushang&#34; href=&#34;/zailushang&#34;&gt;zailushang&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;count media-right&#34;&gt;
+      &lt;a class=&#34;state-false&#34; href=&#34;/topics/15562#reply-118477&#34;&gt;14&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;topic media topic-15540&#34;&gt;
+  &lt;div class=&#34;avatar media-left&#34;&gt;
+    &lt;a title=&#34;ycwdaaaa (孙高飞)&#34; href=&#34;/ycwdaaaa&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/7606.jpg!md&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;infos media-body&#34;&gt;
+    &lt;div class=&#34;title media-heading&#34;&gt;
+      &lt;a title=&#34;测试开发之路--UI 自动化设计军规&#34; href=&#34;/topics/15540&#34;&gt;
+        测试开发之路--UI 自动化设计军规
+&lt;/a&gt;      &lt;i title=&#34;精华帖&#34; class=&#34;fa fa-diamond&#34; data-toggle=&#34;tooltip&#34;&gt;&lt;/i&gt;
+      
+    &lt;/div&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      &lt;a class=&#34;user-name&#34; data-name=&#34;孙高飞&#34; href=&#34;/ycwdaaaa&#34;&gt;ycwdaaaa&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;count media-right&#34;&gt;
+      &lt;a class=&#34;state-false&#34; href=&#34;/topics/15540#reply-118247&#34;&gt;13&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;topic media topic-15514&#34;&gt;
+  &lt;div class=&#34;avatar media-left&#34;&gt;
+    &lt;a title=&#34;cay (蒋刚毅)&#34; href=&#34;/cay&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/8985/1522fe.jpg!md&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;infos media-body&#34;&gt;
+    &lt;div class=&#34;title media-heading&#34;&gt;
+      &lt;a title=&#34;[持续交付实践] DevOps 背景下的组织结构&#34; href=&#34;/topics/15514&#34;&gt;
+        [持续交付实践] DevOps 背景下的组织结构
+&lt;/a&gt;      &lt;i title=&#34;精华帖&#34; class=&#34;fa fa-diamond&#34; data-toggle=&#34;tooltip&#34;&gt;&lt;/i&gt;
+      
+    &lt;/div&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      &lt;a class=&#34;user-name&#34; data-name=&#34;蒋刚毅&#34; href=&#34;/cay&#34;&gt;cay&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;count media-right&#34;&gt;
+      &lt;a class=&#34;state-false&#34; href=&#34;/topics/15514#reply-117693&#34;&gt;5&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;topic media topic-15359&#34;&gt;
+  &lt;div class=&#34;avatar media-left&#34;&gt;
+    &lt;a title=&#34;zailushang (zailushang)&#34; href=&#34;/zailushang&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/2203/ef9cd1.jpeg!md&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;infos media-body&#34;&gt;
+    &lt;div class=&#34;title media-heading&#34;&gt;
+      &lt;a title=&#34;[前言] 区块链是什么？&#34; href=&#34;/topics/15359&#34;&gt;
+        [前言] 区块链是什么？
+&lt;/a&gt;      &lt;i title=&#34;精华帖&#34; class=&#34;fa fa-diamond&#34; data-toggle=&#34;tooltip&#34;&gt;&lt;/i&gt;
+      
+    &lt;/div&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      &lt;a class=&#34;user-name&#34; data-name=&#34;zailushang&#34; href=&#34;/zailushang&#34;&gt;zailushang&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;count media-right&#34;&gt;
+      &lt;a class=&#34;state-false&#34; href=&#34;/topics/15359#reply-116833&#34;&gt;14&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;topic media topic-15291&#34;&gt;
+  &lt;div class=&#34;avatar media-left&#34;&gt;
+    &lt;a title=&#34;HongBo (啵板)&#34; href=&#34;/HongBo&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/21810/bd53ca.jpg!md&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;infos media-body&#34;&gt;
+    &lt;div class=&#34;title media-heading&#34;&gt;
+      &lt;a title=&#34;学习 Airtest 的一些经验分享，新手指引部分&#34; href=&#34;/topics/15291&#34;&gt;
+        学习 Airtest 的一些经验分享，新手指引部分
+&lt;/a&gt;      &lt;i title=&#34;精华帖&#34; class=&#34;fa fa-diamond&#34; data-toggle=&#34;tooltip&#34;&gt;&lt;/i&gt;
+      
+    &lt;/div&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      &lt;a class=&#34;user-name&#34; data-name=&#34;啵板&#34; href=&#34;/HongBo&#34;&gt;HongBo&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;count media-right&#34;&gt;
+      &lt;a class=&#34;state-false&#34; href=&#34;/topics/15291#reply-117054&#34;&gt;12&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;topic media topic-15058&#34;&gt;
+  &lt;div class=&#34;avatar media-left&#34;&gt;
+    &lt;a title=&#34;ycwdaaaa (孙高飞)&#34; href=&#34;/ycwdaaaa&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/7606.jpg!md&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;infos media-body&#34;&gt;
+    &lt;div class=&#34;title media-heading&#34;&gt;
+      &lt;a title=&#34;测试开发之路--k8s 下的大规模持续集成与环境治理&#34; href=&#34;/topics/15058&#34;&gt;
+        测试开发之路--k8s 下的大规模持续集成与环境治理
+&lt;/a&gt;      &lt;i title=&#34;精华帖&#34; class=&#34;fa fa-diamond&#34; data-toggle=&#34;tooltip&#34;&gt;&lt;/i&gt;
+      
+    &lt;/div&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      &lt;a class=&#34;user-name&#34; data-name=&#34;孙高飞&#34; href=&#34;/ycwdaaaa&#34;&gt;ycwdaaaa&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;count media-right&#34;&gt;
+      &lt;a class=&#34;state-false&#34; href=&#34;/topics/15058#reply-117685&#34;&gt;18&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;topic media topic-14914&#34;&gt;
+  &lt;div class=&#34;avatar media-left&#34;&gt;
+    &lt;a title=&#34;success (hello)&#34; href=&#34;/success&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/7064.jpg!md&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;infos media-body&#34;&gt;
+    &lt;div class=&#34;title media-heading&#34;&gt;
+      &lt;a title=&#34;基于 uiautomatorviewer 自动生成代码 (兼容 android 和 iOS)  &#34; href=&#34;/topics/14914&#34;&gt;
+        基于 uiautomatorviewer 自动生成代码 (兼容 android 和 iOS)  
+&lt;/a&gt;      &lt;i title=&#34;精华帖&#34; class=&#34;fa fa-diamond&#34; data-toggle=&#34;tooltip&#34;&gt;&lt;/i&gt;
+      
+    &lt;/div&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      &lt;a class=&#34;user-name&#34; data-name=&#34;hello&#34; href=&#34;/success&#34;&gt;success&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;count media-right&#34;&gt;
+      &lt;a class=&#34;state-false&#34; href=&#34;/topics/14914#reply-118208&#34;&gt;90&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;topic media topic-14886&#34;&gt;
+  &lt;div class=&#34;avatar media-left&#34;&gt;
+    &lt;a title=&#34;18500425217 (王小喜)&#34; href=&#34;/18500425217&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/12802/286c07.jpeg!md&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;infos media-body&#34;&gt;
+    &lt;div class=&#34;title media-heading&#34;&gt;
+      &lt;a title=&#34;Appium-实现手势密码登陆&#34; href=&#34;/topics/14886&#34;&gt;
+        Appium-实现手势密码登陆
+&lt;/a&gt;      &lt;i title=&#34;精华帖&#34; class=&#34;fa fa-diamond&#34; data-toggle=&#34;tooltip&#34;&gt;&lt;/i&gt;
+      
+    &lt;/div&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      &lt;a class=&#34;user-name&#34; data-name=&#34;王小喜&#34; href=&#34;/18500425217&#34;&gt;18500425217&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;count media-right&#34;&gt;
+      &lt;a class=&#34;state-false&#34; href=&#34;/topics/14886#reply-116958&#34;&gt;12&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+        &lt;div class=&#34;index-locations panel panel-default&#34;&gt;
+      &lt;div class=&#34;panel-heading&#34;&gt;热门节点 &lt;i class=&#34;fa fa-dot-circle-o&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&lt;/div&gt;
+      &lt;div class=&#34;panel-body location-list&#34; style=&#34;text-align:center;&#34;&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;Appium&#34; data-id=&#34;23&#34; href=&#34;/topics/node23&#34;&gt;Appium&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;招聘&#34; data-id=&#34;19&#34; href=&#34;/topics/node19&#34;&gt;招聘&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;新手区&#34; data-id=&#34;36&#34; href=&#34;/topics/node36&#34;&gt;新手区&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;接口测试&#34; data-id=&#34;62&#34; href=&#34;/topics/node62&#34;&gt;接口测试&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;Bug 曝光台&#34; data-id=&#34;47&#34; href=&#34;/topics/node47&#34;&gt;Bug 曝光台&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;通用技术&#34; data-id=&#34;25&#34; href=&#34;/topics/node25&#34;&gt;通用技术&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;违规处理区&#34; data-id=&#34;55&#34; href=&#34;/topics/node55&#34;&gt;违规处理区&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;移动测试基础&#34; data-id=&#34;33&#34; href=&#34;/topics/node33&#34;&gt;移动测试基础&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;Macaca&#34; data-id=&#34;68&#34; href=&#34;/topics/node68&#34;&gt;Macaca&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;灌水&#34; data-id=&#34;11&#34; href=&#34;/topics/node11&#34;&gt;灌水&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;自动化工具&#34; data-id=&#34;2&#34; href=&#34;/topics/node2&#34;&gt;自动化工具&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;匿名吐槽&#34; data-id=&#34;37&#34; href=&#34;/topics/node37&#34;&gt;匿名吐槽&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;其他测试框架&#34; data-id=&#34;31&#34; href=&#34;/topics/node31&#34;&gt;其他测试框架&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;性能测试工具&#34; data-id=&#34;3&#34; href=&#34;/topics/node3&#34;&gt;性能测试工具&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;Selenium&#34; data-id=&#34;73&#34; href=&#34;/topics/node73&#34;&gt;Selenium&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;职业经验&#34; data-id=&#34;12&#34; href=&#34;/topics/node12&#34;&gt;职业经验&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;活动沙龙&#34; data-id=&#34;24&#34; href=&#34;/topics/node24&#34;&gt;活动沙龙&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;问答&#34; data-id=&#34;20&#34; href=&#34;/topics/node20&#34;&gt;问答&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;移动性能测试&#34; data-id=&#34;32&#34; href=&#34;/topics/node32&#34;&gt;移动性能测试&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;Robotium&#34; data-id=&#34;39&#34; href=&#34;/topics/node39&#34;&gt;Robotium&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;持续集成&#34; data-id=&#34;46&#34; href=&#34;/topics/node46&#34;&gt;持续集成&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;UiAutomator&#34; data-id=&#34;53&#34; href=&#34;/topics/node53&#34;&gt;UiAutomator&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;iOS 测试&#34; data-id=&#34;51&#34; href=&#34;/topics/node51&#34;&gt;iOS 测试&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;AI测试&#34; data-id=&#34;134&#34; href=&#34;/topics/node134&#34;&gt;AI测试&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;霍格沃兹测试学院&#34; data-id=&#34;81&#34; href=&#34;/topics/node81&#34;&gt;霍格沃兹测试学院&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;社区管理&#34; data-id=&#34;13&#34; href=&#34;/topics/node13&#34;&gt;社区管理&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;STF&#34; data-id=&#34;137&#34; href=&#34;/topics/node137&#34;&gt;STF&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;测试管理&#34; data-id=&#34;44&#34; href=&#34;/topics/node44&#34;&gt;测试管理&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;fir.im&#34; data-id=&#34;49&#34; href=&#34;/topics/node49&#34;&gt;fir.im&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;WeTest腾讯质量开发平台&#34; data-id=&#34;80&#34; href=&#34;/topics/node80&#34;&gt;WeTest腾讯质量开发平台&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;前端测试&#34; data-id=&#34;16&#34; href=&#34;/topics/node16&#34;&gt;前端测试&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;树洞&#34; data-id=&#34;132&#34; href=&#34;/topics/node132&#34;&gt;树洞&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;读书会&#34; data-id=&#34;87&#34; href=&#34;/topics/node87&#34;&gt;读书会&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;移动安全测试&#34; data-id=&#34;34&#34; href=&#34;/topics/node34&#34;&gt;移动安全测试&lt;/a&gt;&lt;/span&gt;
+            &lt;span class=&#34;name&#34;&gt;&lt;a title=&#34;devops&#34; data-id=&#34;98&#34; href=&#34;/topics/node98&#34;&gt;devops&lt;/a&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+
+      &lt;div class=&#34;index-locations panel panel-default&#34;&gt;
+    &lt;div class=&#34;panel-heading&#34;&gt;热门城市 &lt;i class=&#34;fa fa-map-marker&#34;&gt;&lt;/i&gt; &lt;/div&gt;
+    &lt;div class=&#34;panel-body location-list&#34; style=&#34;text-align:center;&#34;&gt;
+        &lt;span class=&#34;name&#34;&gt;&lt;a href=&#34;/users/city/%E5%8C%97%E4%BA%AC&#34;&gt;北京&lt;/a&gt;&lt;/span&gt;
+        &lt;span class=&#34;name&#34;&gt;&lt;a href=&#34;/users/city/%E4%B8%8A%E6%B5%B7&#34;&gt;上海&lt;/a&gt;&lt;/span&gt;
+        &lt;span class=&#34;name&#34;&gt;&lt;a href=&#34;/users/city/%E6%B7%B1%E5%9C%B3&#34;&gt;深圳&lt;/a&gt;&lt;/span&gt;
+        &lt;span class=&#34;name&#34;&gt;&lt;a href=&#34;/users/city/%E6%9D%AD%E5%B7%9E&#34;&gt;杭州&lt;/a&gt;&lt;/span&gt;
+        &lt;span class=&#34;name&#34;&gt;&lt;a href=&#34;/users/city/%E5%B9%BF%E5%B7%9E&#34;&gt;广州&lt;/a&gt;&lt;/span&gt;
+        &lt;span class=&#34;name&#34;&gt;&lt;a href=&#34;/users/city/%E6%88%90%E9%83%BD&#34;&gt;成都&lt;/a&gt;&lt;/span&gt;
+        &lt;span class=&#34;name&#34;&gt;&lt;a href=&#34;/users/city/%E5%8D%97%E4%BA%AC&#34;&gt;南京&lt;/a&gt;&lt;/span&gt;
+        &lt;span class=&#34;name&#34;&gt;&lt;a href=&#34;/users/city/%E8%A5%BF%E5%AE%89&#34;&gt;西安&lt;/a&gt;&lt;/span&gt;
+        &lt;span class=&#34;name&#34;&gt;&lt;a href=&#34;/users/city/%E6%AD%A6%E6%B1%89&#34;&gt;武汉&lt;/a&gt;&lt;/span&gt;
+        &lt;span class=&#34;name&#34;&gt;&lt;a href=&#34;/users/city/%E8%8B%8F%E5%B7%9E&#34;&gt;苏州&lt;/a&gt;&lt;/span&gt;
+        &lt;span class=&#34;name&#34;&gt;&lt;a href=&#34;/users/city/%E5%8E%A6%E9%97%A8&#34;&gt;厦门&lt;/a&gt;&lt;/span&gt;
+        &lt;span class=&#34;name&#34;&gt;&lt;a href=&#34;/users/city/%E9%87%8D%E5%BA%86&#34;&gt;重庆&lt;/a&gt;&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+    
+&lt;div class=&#34;row home-icons hidden-sm hidden-xs&#34;&gt;
+    &lt;div class=&#34;col-md-3&#34;&gt;
+        &lt;div class=&#34;item item5&#34;&gt;
+            &lt;div class=&#34;icon&#34;&gt;
+                &lt;img src=&#34;https://testerhome.com/weixin.jpg&#34; width=&#34;100%&#34; height=&#34;100%&#34;&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;text&#34;&gt;
+                &lt;a href=&#34;/topics/popular&#34;&gt;公众号&lt;i class=&#34;pull-right fa fa-arrow-right&#34;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;col-md-3&#34;&gt;
+        &lt;div class=&#34;item item6&#34;&gt;
+            &lt;div class=&#34;icon&#34;&gt;
+                &lt;img src=&#34;/photo/2016/45740b8b1487cc191b585bc2da978f06.jpeg&#34;  width=&#34;100%&#34; height=&#34;100%&#34;&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;text&#34;&gt;
+                &lt;a href=&#34;/topics/popular&#34;&gt;个人号助手&lt;i class=&#34;pull-right fa fa-arrow-right&#34;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;col-md-3&#34;&gt;
+        &lt;div class=&#34;item item6&#34;&gt;
+            &lt;div class=&#34;icon&#34;&gt;
+                &lt;img src=&#34;https://testerhome.com/uploads/photo/2017/94db8410-69e5-4cfa-b4c7-66d8783f2bc5.png!large&#34;  width=&#34;100%&#34; height=&#34;100%&#34;&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;text&#34;&gt;
+                &lt;a href=&#34;https://fir.im/w2j5&#34;&gt;Android 客户端&lt;i class=&#34;pull-right fa fa-arrow-right&#34;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;col-md-3&#34;&gt;
+        &lt;div class=&#34;item item6&#34;&gt;
+            &lt;div class=&#34;icon&#34;&gt;
+                &lt;img src=&#34;https://testerhome.com/uploads/photo/2016/bcff0e5a77254c32d9f35760dbc9b369.png!large&#34;  width=&#34;100%&#34; height=&#34;100%&#34;&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;text&#34;&gt;
+                &lt;a href=&#34;https://itunes.apple.com/us/app/testerhome-guan-fang-ke-hu/id1182812600?ls=1&amp;mt=8&#34;&gt;iOS 客户端&lt;i class=&#34;pull-right fa fa-arrow-right&#34;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+
+
+&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;col-md-3 home-side-bar&#34;&gt;
+    
+
+    &lt;div class=&#34;home_suggest_topics panel panel-default&#34;&gt;
+      &lt;div class=&#34;panel-heading&#34;&gt;七日最热 Top10&lt;/div&gt;
+      &lt;div class=&#34;panel-body&#34;&gt;
+          &lt;div class=&#34;sidebar_topic topic-15747&#34;&gt;
+  &lt;div class=&#34;title&#34;&gt;
+            &lt;span class=&#34;label label-default top3&#34;&gt;1&lt;/span&gt;&lt;/a&gt;
+
+    &lt;a title=&#34;安卓性能测试小工具&#34; href=&#34;/topics/15747&#34;&gt;
+        安卓性能测试小工具
+&lt;/a&gt;  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sidebar_topic topic-15721&#34;&gt;
+  &lt;div class=&#34;title&#34;&gt;
+            &lt;span class=&#34;label label-default top3&#34;&gt;2&lt;/span&gt;&lt;/a&gt;
+
+    &lt;a title=&#34;我这个效果怎么样&#34; href=&#34;/topics/15721&#34;&gt;
+        我这个效果怎么样
+&lt;/a&gt;  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sidebar_topic topic-15754&#34;&gt;
+  &lt;div class=&#34;title&#34;&gt;
+            &lt;span class=&#34;label label-default top3&#34;&gt;3&lt;/span&gt;&lt;/a&gt;
+
+    &lt;a title=&#34;不通知组员情况下，测试 leader 是否有权限修改组员的测试用例？[关于测试平台权限调研]&#34; href=&#34;/topics/15754&#34;&gt;
+        不通知组员情况下，测试 leader 是否有权限修改组员的测试用例？[关于测试平台权限调研]
+&lt;/a&gt;  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sidebar_topic topic-15751&#34;&gt;
+  &lt;div class=&#34;title&#34;&gt;
+            &lt;span class=&#34;label label-default&#34;&gt;4&lt;/span&gt;&lt;/a&gt;
+
+    &lt;a title=&#34;测试人员如何做管理&#34; href=&#34;/topics/15751&#34;&gt;
+        测试人员如何做管理
+&lt;/a&gt;  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sidebar_topic topic-15859&#34;&gt;
+  &lt;div class=&#34;title&#34;&gt;
+            &lt;span class=&#34;label label-default&#34;&gt;5&lt;/span&gt;&lt;/a&gt;
+
+    &lt;a title=&#34;对测试人员会一点技术说句中肯的话&#34; href=&#34;/topics/15859&#34;&gt;
+        对测试人员会一点技术说句中肯的话
+&lt;/a&gt;  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sidebar_topic topic-15825&#34;&gt;
+  &lt;div class=&#34;title&#34;&gt;
+            &lt;span class=&#34;label label-default&#34;&gt;6&lt;/span&gt;&lt;/a&gt;
+
+    &lt;a title=&#34;怎么通过 Python 获取 Jira 上面 reopen 的 issue 的数量？&#34; href=&#34;/topics/15825&#34;&gt;
+        怎么通过 Python 获取 Jira 上面 reopen 的 issue 的数量？
+&lt;/a&gt;  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sidebar_topic topic-15770&#34;&gt;
+  &lt;div class=&#34;title&#34;&gt;
+            &lt;span class=&#34;label label-default&#34;&gt;7&lt;/span&gt;&lt;/a&gt;
+
+    &lt;a title=&#34;看技术贴看得太多，无意中看到这么个观点，还是 1996年 时的。&#34; href=&#34;/topics/15770&#34;&gt;
+        看技术贴看得太多，无意中看到这么个观点，还是 1996年 时的。
+&lt;/a&gt;  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sidebar_topic topic-15769&#34;&gt;
+  &lt;div class=&#34;title&#34;&gt;
+            &lt;span class=&#34;label label-default&#34;&gt;8&lt;/span&gt;&lt;/a&gt;
+
+    &lt;a title=&#34;离职 4 个月，有份 offer 该不该接&#34; href=&#34;/topics/15769&#34;&gt;
+        离职 4 个月，有份 offer 该不该接
+&lt;/a&gt;  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sidebar_topic topic-15738&#34;&gt;
+  &lt;div class=&#34;title&#34;&gt;
+            &lt;span class=&#34;label label-default&#34;&gt;9&lt;/span&gt;&lt;/a&gt;
+
+    &lt;a title=&#34;stf 环境已经搭建完毕 (linux+ubuntu18),但是要在这个基础上用 Java 或者 python 开发可以吗？有没有这样做过的大神请教一下啊&#34; href=&#34;/topics/15738&#34;&gt;
+        stf 环境已经搭建完毕 (linux+ubuntu18),但是要在这个基础上用 Java 或者 python 开发可以吗？有没有这样做过的大神请教一下啊
+&lt;/a&gt;  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sidebar_topic topic-15768&#34;&gt;
+  &lt;div class=&#34;title&#34;&gt;
+            &lt;span class=&#34;label label-default&#34;&gt;10&lt;/span&gt;&lt;/a&gt;
+
+    &lt;a title=&#34;测试开发之路--UI 自动化常用设计模式&#34; href=&#34;/topics/15768&#34;&gt;
+        测试开发之路--UI 自动化常用设计模式
+&lt;/a&gt;  &lt;/div&gt;
+&lt;/div&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;home_suggest_topics panel panel-default&#34;&gt;
+      &lt;div class=&#34;panel-heading&#34;&gt;最新 bug &lt;i class=&#34;fa fa-bug&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&lt;/div&gt;
+      &lt;div class=&#34;panel-body&#34;&gt;
+        &lt;div class=&#34;sidebar_topic topic-15857&#34;&gt;
+  &lt;div class=&#34;title&#34;&gt;
+            &lt;span class=&#34;label label-default top3&#34;&gt;1&lt;/span&gt;&lt;/a&gt;
+
+    &lt;a title=&#34;没成功加入那个社团，总是能接收那个社团发出的通知，不知道哪里可以设置？&#34; href=&#34;/topics/15857&#34;&gt;
+        没成功加入那个社团，总是能接收那个社团发出的通知，不知道哪里可以设置？
+&lt;/a&gt;  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sidebar_topic topic-15819&#34;&gt;
+  &lt;div class=&#34;title&#34;&gt;
+            &lt;span class=&#34;label label-default top3&#34;&gt;2&lt;/span&gt;&lt;/a&gt;
+
+    &lt;a title=&#34;中通的同学，你们投诉网页有个问题&#34; href=&#34;/topics/15819&#34;&gt;
+        中通的同学，你们投诉网页有个问题
+&lt;/a&gt;  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sidebar_topic topic-15813&#34;&gt;
+  &lt;div class=&#34;title&#34;&gt;
+            &lt;span class=&#34;label label-default top3&#34;&gt;3&lt;/span&gt;&lt;/a&gt;
+
+    &lt;a title=&#34;[咸鱼] 咸鱼租房板块，二级菜单进入后，顶部筛选条件筛选不出数据。&#34; href=&#34;/topics/15813&#34;&gt;
+        [咸鱼] 咸鱼租房板块，二级菜单进入后，顶部筛选条件筛选不出数据。
+&lt;/a&gt;  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sidebar_topic topic-15569&#34;&gt;
+  &lt;div class=&#34;title&#34;&gt;
+            &lt;span class=&#34;label label-default&#34;&gt;4&lt;/span&gt;&lt;/a&gt;
+
+    &lt;a title=&#34;google 浏览器的 bug&#34; href=&#34;/topics/15569&#34;&gt;
+        google 浏览器的 bug
+&lt;/a&gt;  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sidebar_topic topic-15544&#34;&gt;
+  &lt;div class=&#34;title&#34;&gt;
+            &lt;span class=&#34;label label-default&#34;&gt;5&lt;/span&gt;&lt;/a&gt;
+
+    &lt;a title=&#34;小黄车&#34; href=&#34;/topics/15544&#34;&gt;
+        小黄车
+&lt;/a&gt;  &lt;/div&gt;
+&lt;/div&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;div class=&#34;home_suggest_topics panel panel-default&#34;&gt;
+&lt;div class=&#34;panel-heading&#34;&gt;最新收录开源测试项目&lt;/div&gt;
+&lt;div class=&#34;panel-body&#34;&gt;
+    &lt;div class=&#34;sidebar_topic topic-45&#34;&gt;
+  &lt;div class=&#34;title&#34;&gt;
+        &lt;img class=&#34;avatar-small&#34; src=&#34;/uploads/opensource_project/2018/6b83ae18-8839-4c0d-ad7e-8c652bfdbea9.png&#34;&gt;
+        &lt;a title=&#34;钉钉机器人消息自动化通知工具(Python版)&#34; href=&#34;/opensource_projects/dingtalkchatbot&#34;&gt;
+        钉钉机器人消息自动化通知工具(Python版)
+&lt;/a&gt;  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sidebar_topic topic-44&#34;&gt;
+  &lt;div class=&#34;title&#34;&gt;
+        &lt;img class=&#34;avatar-small&#34; src=&#34;/uploads/opensource_project/2018/dbad700b-2015-438d-8b52-f8218e440571.png&#34;&gt;
+        &lt;a title=&#34;AutoLink是一个开源Web IDE自动化测试集成解决方案&#34; href=&#34;/opensource_projects/autolink&#34;&gt;
+        AutoLink是一个开源Web IDE自动化测试集成解决方案
+&lt;/a&gt;  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sidebar_topic topic-43&#34;&gt;
+  &lt;div class=&#34;title&#34;&gt;
+        &lt;img class=&#34;avatar-small&#34; src=&#34;/uploads/opensource_project/2018/e063de0d-979c-4cde-b687-d8383c4905b9.jpg&#34;&gt;
+        &lt;a title=&#34;使用python实现简单的测试工具&#34; href=&#34;/opensource_projects/43&#34;&gt;
+        使用python实现简单的测试工具
+&lt;/a&gt;  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sidebar_topic topic-42&#34;&gt;
+  &lt;div class=&#34;title&#34;&gt;
+        &lt;img class=&#34;avatar-small&#34; src=&#34;/uploads/opensource_project/2018/8126458d-95d9-4cc5-9dd5-c4061e76b994.jpg&#34;&gt;
+        &lt;a title=&#34;DCITS_ATP&#34; href=&#34;/opensource_projects/42&#34;&gt;
+        DCITS_ATP
+&lt;/a&gt;  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sidebar_topic topic-41&#34;&gt;
+  &lt;div class=&#34;title&#34;&gt;
+        &lt;img class=&#34;avatar-small&#34; src=&#34;/uploads/opensource_project/2018/2540e6bb-38e1-4ae8-9871-69c13ba77b0e.jpg&#34;&gt;
+        &lt;a title=&#34;selenium webdriver实用指南&#34; href=&#34;/opensource_projects/41&#34;&gt;
+        selenium webdriver实用指南
+&lt;/a&gt;  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div id=&#34;hall-of-fames&#34; class=&#34;panel panel-default&#34;&gt;
+  &lt;div class=&#34;panel-heading&#34;&gt;最新加入 &lt;i class=&#39;fa fa-fire&#39;&gt;&lt;/i&gt;（新同学）&lt;/div&gt;
+  &lt;div class=&#34;panel-body&#34;&gt;
+        &lt;div class=&#34;users-label&#34;&gt;
+              &lt;a class=&#34;users-label-item&#34; href=&#34;/ruby-gbb&#34; title=&#34;Ruby&#34;&gt;
+                &lt;img class=&#34;avatar-small inline-block&#34; src=&#34;/uploads/user/avatar/36743/a512d2.jpg!sm&#34;&gt;
+                ruby-gbb
+              &lt;/a&gt;
+              &lt;a class=&#34;users-label-item&#34; href=&#34;/liyuan-zhu&#34; title=&#34;朱立元&#34;&gt;
+                &lt;img class=&#34;avatar-small inline-block&#34; src=&#34;/uploads/user/avatar/36738/3bf76c.jpeg!sm&#34;&gt;
+                liyuan-zhu
+              &lt;/a&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+    &lt;div class=&#34;panel panel-default&#34;&gt;
+      &lt;div class=&#34;panel-heading&#34;&gt;统计信息&lt;/div&gt;
+      &lt;ul class=&#34;list-group&#34;&gt;
+        &lt;li class=&#34;list-group-item&#34;&gt;社区会员: 31888 人&lt;/li&gt;
+        &lt;li class=&#34;list-group-item&#34;&gt;帖子数: 15745 个&lt;/li&gt;
+        &lt;li class=&#34;list-group-item&#34;&gt;回帖数: 118601 条&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;footer class=&#34;footer&#34; id=&#34;footer&#34; data-turbolinks-permanent&gt;
+    &lt;div class=&#34;container&#34;&gt;
+      &lt;div class=&#34;row&#34;&gt;
+  &lt;div class=&#34;col-sm-9&#34;&gt;
+    &lt;div class=&#34;media&#34;&gt;
+      &lt;div class=&#34;media-left&#34;&gt;
+        &lt;img src=&#34;https://testerhome.com/uploads/photo/2016/274e7ebc8ad0db0b7e718fceea3628a9.png!large&#34; style=&#34;width:48px;&#34;&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;media-body&#34;&gt;
+
+        &lt;div class=&#34;links&#34;&gt;
+          &lt;a href=&#34;https://testerhome.com/wiki/about&#34;&gt;关于&lt;/a&gt; / 
+          &lt;a href=&#34;https://testerhome.com/users&#34;&gt;活跃用户&lt;/a&gt; / 
+          &lt;a href=&#34;http://test-china.org/&#34;  target=&#34;_blank&#34;&gt;中国移动互联网测试技术大会&lt;/a&gt; / 
+          &lt;a href=&#34;/topics/node13&#34;&gt;反馈&lt;/a&gt; / 
+          &lt;a href=&#34;https://github.com/testerhome&#34;&gt;Github&lt;/a&gt; / 
+          &lt;a href=&#34;https://testerhome.com//api-doc/&#34;&gt;API&lt;/a&gt; /  
+          &lt;a href=&#34;https://testerhome.com/sites&#34;&gt;酷站&lt;/a&gt;  / 
+          &lt;a href=&#34;/wiki/spreadtesterhome&#34;&gt;帮助推广&lt;/a&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&#34;copyright&#34; style=&#34;font-size:14px; color:#9CA4A9;margin-top:0px;margin-bottom:5px&#34;&gt;
+          TesterHome 移动测试社区，由众多移动测试工作者维护，致力于推进国内测试技术。Inspired by RubyChina
+        &lt;/div&gt;
+&lt;div class=&#34;links&#34;  data-no-turbolink=&#34;&#34;&gt;
+&lt;span style=&#34;font-size:14px; color:#666;&#34;&gt;友情链接&lt;/span&gt;&lt;span style=&#34;margin-left:5px&#34;&gt;
+          &lt;a style=&#34;color:#317DDA;&#34; href=&#34;http://wetest.qq.com/?from=links_testerhome&#34; target=&#34;_blank&#34;&gt;WeTest腾讯质量开放平台&lt;/a&gt; / 
+          &lt;a style=&#34;color:#317DDA;&#34; href=&#34;http://www.infoq.com/cn&#34; target=&#34;_blank&#34;&gt;InfoQ&lt;/a&gt; / 
+          &lt;a style=&#34;color:#317DDA;&#34; href=&#34;http://www.testtao.com/portal.php&#34; target=&#34;_blank&#34;&gt;测试之道&lt;/a&gt; / 
+          &lt;a style=&#34;color:#317DDA;&#34; href=&#34;https://www.testwo.com/&#34; target=&#34;_blank&#34;&gt;测试窝&lt;/a&gt; / 
+          &lt;a style=&#34;color:#317DDA;&#34; href=&#34;http://tieba.baidu.com/f?ie=utf-8&amp;kw=%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95&amp;fr=search&#34; target=&#34;_blank&#34;&gt;百度测试吧&lt;/a&gt;
+&lt;/span&gt;
+    &lt;/div&gt;
+        &lt;div class=&#34;links&#34; style=&#34;margin-top:0px&#34; data-no-turbolink=&#34;&#34;&gt;
+          &lt;a href=&#34;?locale=zh-CN&#34; rel=&#34;nofollow&#34;&gt;简体中文&lt;/a&gt; / &lt;a href=&#34;?locale=zh-TW&#34; rel=&#34;nofollow&#34;&gt;正體中文&lt;/a&gt; / &lt;a href=&#34;?locale=en&#34;
+            rel=&#34;nofollow&#34;&gt;English&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;col-sm-3 friends&#34;&gt;
+    &lt;a href=&#34;http://www.ucloud.cn/?utm_source=zanzhu&amp;utm_campaign=testerhome&amp;utm_medium=display&amp;utm_content=yejiao&amp;ytag=testerhome_logo&#34;
+      target=&#34;_blank&#34; rel=&#34;twipsy&#34; style=&#34;display:inline-block;margin-right:5px;&#34; data-original-title=&#34;本站服务器由 Ucloud 赞助&#34;&gt;&lt;img src=&#34;https://testerhome.com/photo/2016/4ce97c93f9433f654884c4839408327a.png&#34; style=&#34;height:28px&#34;&gt;&lt;/a&gt;
+
+    &lt;a href=&#34;http://www.sendcloud.net/&#34;
+      target=&#34;_blank&#34; rel=&#34;twipsy&#34; style=&#34;display:inline-block;margin-right:5px;&#34; data-original-title=&#34;邮件服务由 SendCloud 赞助&#34;&gt;&lt;img src=&#34;https://testerhome.com/uploads/photo/2017/0f9fb5db-2472-4430-9f7e-6c051f28c3c9.png&#34; style=&#34;height:28px&#34;&gt;&lt;/a&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+    &lt;/div&gt;
+  &lt;/footer&gt;
+
+  &lt;script type=&#34;text/javascript&#34; data-turbolinks-eval=&#34;false&#34;&gt;
+    App.root_url = &#34;https://testerhome.com/&#34;;
+    App.asset_url = &#34;&#34;;
+    App.twemoji_url = &#34;https://twemoji.b0.upaiyun.com/2&#34;;
+    App.locale = &#34;zh-CN&#34;;
+  &lt;/script&gt;
+  
+  &lt;script&gt;
+    ga(&#39;create&#39;, &#39;UA-45014075-1&#39;, &#39;auto&#39;);
+    ga(&#39;require&#39;, &#39;displayfeatures&#39;);
+    ga(&#39;send&#39;, &#39;pageview&#39;);
+  &lt;/script&gt;
+  &lt;div class=&#34;zoom-overlay&#34;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>X-Request-Id</strong>: 2bb29aa7-4a15-4550-b159-0c8c402468b9
+                            </div>
+                            
+                            <div>
+                              <strong>X-XSS-Protection</strong>: 1; mode=block
+                            </div>
+                            
+                            <div>
+                              <strong>X-Download-Options</strong>: noopen
+                            </div>
+                            
+                            <div>
+                              <strong>X-Content-Type-Options</strong>: nosniff
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Encoding</strong>: gzip
+                            </div>
+                            
+                            <div>
+                              <strong>Transfer-Encoding</strong>: chunked
+                            </div>
+                            
+                            <div>
+                              <strong>Set-Cookie</strong>: user_id=bnVsbA%3D%3D--26c1ccfd51118ea112eac0447589c466425bcd38; path=/; secure, _homeland_session=HXWrhMOIey3E9zZc%2BWdWN260rfNN5XhJTF1eONnbOKjOWQ5rPwkJHbbn7flsfp%2FnA8gUX0cIvvzvi0htTUdcsLi3V1NzzbQXXTFfE6mssE%2FRcuFLDP4O%2Bt2elNKPaXNuBq4NgBKGcjlzeXqJNVvweKGFubKLZmIHYD%2Ft1O4rY2wgP6qg7WoXuXyprQ6uU413CmpI5FZgimr66goryH9Jb8o%2BN0hwJ7OtpocWqIYtIHF3PpqWt0mIbkehqdhT1w8uaWJqs59w3Ju7nlrS29iysrF0rezn7Sa9zg%3D%3D--Tllj5lhnAD%2Fdie4k--S2HuI1AcVzl3PcDnPHRdNQ%3D%3D; path=/; expires=Sun, 25 Nov 2018 10:18:56 -0000; secure; HttpOnly
+                            </div>
+                            
+                            <div>
+                              <strong>Strict-Transport-Security</strong>: max-age=15552000; includeSubDomains
+                            </div>
+                            
+                            <div>
+                              <strong>Vary</strong>: Accept-Encoding
+                            </div>
+                            
+                            <div>
+                              <strong>X-Runtime</strong>: 0.063722
+                            </div>
+                            
+                            <div>
+                              <strong>Server</strong>: nginx/1.10.2
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Security-Policy</strong>: ;
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                            <div>
+                              <strong>ETag</strong>: W/"b10f315763a7a3809ece9b9a0e53c48c"
+                            </div>
+                            
+                            <div>
+                              <strong>X-Permitted-Cross-Domain-Policies</strong>: none
+                            </div>
+                            
+                            <div>
+                              <strong>Cache-Control</strong>: max-age=0, private, must-revalidate
+                            </div>
+                            
+                            <div>
+                              <strong>Date</strong>: Mon, 27 Aug 2018 10:18:56 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>X-Frame-Options</strong>: SAMEORIGIN
+                            </div>
+                            
+                            <div>
+                              <strong>Referrer-Policy</strong>: strict-origin-when-cross-origin
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: text/html; charset=utf-8
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                        
+                      
+                        
+                      
+                        
+                  </table>
+              </div>
+
+              <h3>Validators:</h3>
+              <div style="overflow: auto">
+                  <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>eq</td>
+                      <td>200</td>
+                      <td>200</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        headers.Content-Type
+                      </td>
+                      <td>eq</td>
+                      <td>text/html; charset=utf-8</td>
+                      <td>text/html; charset=utf-8</td>
+                    </tr>
+                    
+                  </table>
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>48562</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>304.94</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>294.505</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        
+
+      </td>
+    </tr>
+  
+    
+    <tr id="record_1_2">
+      <th class="error" style="width:5em;">error</td>
+      <td colspan="2">/topics/15768</td>
+      <td style="text-align:center;width:6em;">153.37 ms</td>
+      <td class="detail">
+
+        <a class="button" href="#popup_log_1_2">log</a>
+        <div id="popup_log_1_2" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_2">&times;</a>
+
+            <div class="content">
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          https://testerhome.com/topics/15768
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: */*
+                          </div>
+                          
+                          <div>
+                            <strong>user-agent</strong>: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36
+                          </div>
+                          
+                          <div>
+                            <strong>turbolinks-referrer</strong>: https://testerhome.com/
+                          </div>
+                          
+                          <div>
+                            <strong>Cookie</strong>: user_id=bnVsbA%3D%3D--26c1ccfd51118ea112eac0447589c466425bcd38; _homeland_session=HXWrhMOIey3E9zZc%2BWdWN260rfNN5XhJTF1eONnbOKjOWQ5rPwkJHbbn7flsfp%2FnA8gUX0cIvvzvi0htTUdcsLi3V1NzzbQXXTFfE6mssE%2FRcuFLDP4O%2Bt2elNKPaXNuBq4NgBKGcjlzeXqJNVvweKGFubKLZmIHYD%2Ft1O4rY2wgP6qg7WoXuXyprQ6uU413CmpI5FZgimr66goryH9Jb8o%2BN0hwJ7OtpocWqIYtIHF3PpqWt0mIbkehqdhT1w8uaWJqs59w3Ju7nlrS29iysrF0rezn7Sa9zg%3D%3D--Tllj5lhnAD%2Fdie4k--S2HuI1AcVzl3PcDnPHRdNQ%3D%3D
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>start_timestamp</th>
+                      <td>
+                        
+                          1535365136.16
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>body</th>
+                      <td>
+                        
+                          None
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          GET
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            <RequestsCookieJar[<Cookie _homeland_session=OEYSlFhmT4n3vkBs2Hv3D28FG8ZkJo98cSt17gxUGUpeqgtYUSRQ%2B%2FP6ku6VNXzsQOgTdn5lZrt%2BKGtgkA5VaOIwYsJwZmbmgfTTqNfrv7u%2FZBmGPZxjTKWB7UKJ6T9xkgUSwZZgll4P550NjAKAoA3aqUq3JD41dXTyErZ3Diu0tNhOexz%2F16U443gY7rufmhK%2BUpqa6%2FC6Pn0u7TlBRxWeFM61ORjhnfntMhLJtT4appqFWt%2FnUokCX5IJs%2BJHXniCrvdlyHhk9bujuM%2FpsqY7VLMOYiWuJA%3D%3D--x%2BIW8PBMaq%2BwKd16--It2uTSuiFCtaebxSbYbhQA%3D%3D for testerhome.com/>]>
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            utf-8
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                        
+                      
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            OK
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                        
+                      
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            https://testerhome.com/topics/15768
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                        
+                      
+                      <tr>
+                        <th>content</th>
+                        <td>
+                          
+                            
+                              <pre>&lt;!--
+   _   _                      _                 _
+  | | | |                    | |               | |
+  | |_| | ___  _ __ ___   ___| | __ _ _ __   __| |
+  |  _  |/ _ \| &#39;_ ` _ \ / _ \ |/ _` | &#39;_ \ / _` |
+  | | | | (_) | | | | | |  __/ | (_| | | | | (_| |
+  \_| |_/\___/|_| |_| |_|\___|_|\__,_|_| |_|\__,_|
+  ------------------------------------------------
+                          https://gethomeland.com
+
+  - Ruby:  2.4.0-p0
+  - Rails: 5.2.0.rc1
+  - Homeland: 3.1.0.beta9
+--&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&#39;utf-8&#39; /&gt;
+  &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&#34; /&gt;
+  &lt;meta name=&#34;keywords&#34; content=&#34;移动测试,游戏测试,性能测试,软件测试,软件测试社区,软件测试资料,软件测试工具,软件测试报告,软件测试方法,自动化测试,软件测试招聘,&#34;&gt;
+  &lt;meta name=&#34;description&#34; content=&#34;TesterHome软件测试社区，人气最旺的软件测试技术门户，提供软件测试社区交流，测试沙龙。&#34;&gt;
+  &lt;title&gt;测试开发之路--UI 自动化常用设计模式 · TesterHome&lt;/title&gt;
+  &lt;link rel=&#34;icon&#34; href=&#34;/assets/favicon-cd32144f74c18746f3dce33e1040e7dfe4c07c8e611e37f3868b1c16b5095da3.png&#34; /&gt;
+  &lt;link rel=&#34;apple-touch-icon-precomposed&#34; href=&#34;/assets/ios-icon-cd32144f74c18746f3dce33e1040e7dfe4c07c8e611e37f3868b1c16b5095da3.png&#34; /&gt;
+  &lt;link rel=&#34;shortcut icon&#34; href=&#34;/assets/big_logo-cd32144f74c18746f3dce33e1040e7dfe4c07c8e611e37f3868b1c16b5095da3.png&#34; /&gt;
+  &lt;link rel=&#34;apple-touch-icon&#34; href=&#34;/assets/favicon-cd32144f74c18746f3dce33e1040e7dfe4c07c8e611e37f3868b1c16b5095da3.png&#34;&gt;
+
+  &lt;!-- http://www.favicon-generator.org/ --&gt;
+  &lt;link rel=&#34;apple-touch-icon&#34; sizes=&#34;57x57&#34; href=&#34;/apple-icon-57x57.png&#34;&gt;
+  &lt;link rel=&#34;apple-touch-icon&#34; sizes=&#34;60x60&#34; href=&#34;/apple-icon-60x60.png&#34;&gt;
+  &lt;link rel=&#34;apple-touch-icon&#34; sizes=&#34;72x72&#34; href=&#34;/apple-icon-72x72.png&#34;&gt;
+  &lt;link rel=&#34;apple-touch-icon&#34; sizes=&#34;76x76&#34; href=&#34;/apple-icon-76x76.png&#34;&gt;
+  &lt;link rel=&#34;apple-touch-icon&#34; sizes=&#34;114x114&#34; href=&#34;/apple-icon-114x114.png&#34;&gt;
+  &lt;link rel=&#34;apple-touch-icon&#34; sizes=&#34;120x120&#34; href=&#34;/apple-icon-120x120.png&#34;&gt;
+  &lt;link rel=&#34;apple-touch-icon&#34; sizes=&#34;144x144&#34; href=&#34;/apple-icon-144x144.png&#34;&gt;
+  &lt;link rel=&#34;apple-touch-icon&#34; sizes=&#34;152x152&#34; href=&#34;/apple-icon-152x152.png&#34;&gt;
+  &lt;link rel=&#34;apple-touch-icon&#34; sizes=&#34;180x180&#34; href=&#34;/apple-icon-180x180.png&#34;&gt;
+  &lt;link rel=&#34;icon&#34; type=&#34;image/png&#34; sizes=&#34;192x192&#34;  href=&#34;/android-icon-192x192.png&#34;&gt;
+  &lt;link rel=&#34;icon&#34; type=&#34;image/png&#34; sizes=&#34;32x32&#34; href=&#34;/favicon-32x32.png&#34;&gt;
+  &lt;link rel=&#34;icon&#34; type=&#34;image/png&#34; sizes=&#34;96x96&#34; href=&#34;/favicon-96x96.png&#34;&gt;
+  &lt;link rel=&#34;icon&#34; type=&#34;image/png&#34; sizes=&#34;16x16&#34; href=&#34;/favicon-16x16.png&#34;&gt;
+  &lt;link rel=&#34;manifest&#34; href=&#34;/manifest.json&#34;&gt;
+  &lt;meta name=&#34;msapplication-TileColor&#34; content=&#34;#ffffff&#34;&gt;
+  &lt;meta name=&#34;msapplication-TileImage&#34; content=&#34;/ms-icon-144x144.png&#34;&gt;
+  &lt;meta name=&#34;theme-color&#34; content=&#34;#ffffff&#34;&gt;
+
+  &lt;meta name=&#34;apple-mobile-web-app-capable&#34; content=&#34;no&#34;&gt;
+  &lt;meta content=&#39;True&#39; name=&#39;HandheldFriendly&#39; /&gt;
+  &lt;link rel=&#34;alternate&#34; type=&#34;application/rss+xml&#34; title=&#34;订阅最新帖&#34; href=&#34;https://testerhome.com/topics/feed&#34; /&gt;
+  &lt;link rel=&#34;stylesheet&#34; media=&#34;screen&#34; href=&#34;/assets/front-2891f990fa6722ecffe4b663563893077ec94d95c8ab07ad3b281449eddd0198.css&#34; data-turbolinks-track=&#34;reload&#34; /&gt;
+  
+  
+  &lt;meta name=&#34;action-cable-url&#34; content=&#34;/cable&#34; /&gt;
+  &lt;meta name=&#34;csrf-param&#34; content=&#34;authenticity_token&#34; /&gt;
+&lt;meta name=&#34;csrf-token&#34; content=&#34;VUHKWQ/MxSjtwyZbAUEmM9RE7o0SyNjkM13rKqPZGjt8g7v0qQv5L/CWhnIBWKPLFsEWkvn/1EBCUpWYv4Eb+Q==&#34; /&gt;
+  
+
+  &lt;script src=&#34;/assets/app-f87d5a9a63a121ab8f1df0fcd340e6e4945e35fa9e17b1a4443f265e9d2227ae.js&#34; data-turbolinks-track=&#34;reload&#34;&gt;&lt;/script&gt;
+  
+&lt;/head&gt;
+&lt;body class=&#34;page-topics&#34; data-controller-name=&#34;topics&#34;&gt;
+  &lt;div class=&#34;header&#34;&gt;
+    &lt;nav class=&#34;navbar navbar-inverse navbar-fixed-top navbar-default&#34;&gt;
+      &lt;div class=&#34;container&#34;&gt;
+        &lt;div class=&#34;navbar-header&#34; id=&#34;navbar-header&#34; data-turbolinks-permanent&gt;
+          &lt;button type=&#34;button&#34; class=&#34;navbar-toggle collapsed&#34; data-toggle=&#34;collapse&#34; data-target=&#34;#main-navbar-collapse&#34;&gt;
+            &lt;span class=&#34;sr-only&#34;&gt;Toggle&lt;/span&gt;
+            &lt;i class=&#34;fa fa-reorder&#34;&gt;&lt;/i&gt;
+          &lt;/button&gt;
+          &lt;a href=&#34;/&#34; class=&#34;navbar-brand&#34;&gt;&lt;b&gt;TesterHome&lt;/b&gt;&lt;/a&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&#34;collapse navbar-collapse&#34; id=&#34;main-navbar-collapse&#34;&gt;
+                &lt;div class=&#34;navbar-nav&#34;&gt;
+        &lt;div class=&#34;navbar-topic-title&#34;&gt;
+          &lt;a href=&#34;#&#34; class=&#34;topic-title pull-left&#34; title=&#34;测试开发之路--UI 自动化常用设计模式&#34; data-type=&#34;top&#34;&gt;
+            &lt;h1&gt;&lt;span class=&#34;node&#34;&gt;前端测试&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;测试开发之路--UI 自动化常用设计模式&lt;/span&gt;&lt;/h1&gt;
+          &lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+          &lt;div id=&#34;main-nav-menu&#34;&gt;
+  &lt;ul class=&#34;nav navbar-nav&#34;&gt;
+    &lt;li class=&#34;active&#34;&gt;&lt;a href=&#34;/topics&#34;&gt;社区&lt;/a&gt;&lt;/li&gt;&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/bugs&#34;&gt;Bug 曝光台&lt;/a&gt;&lt;/li&gt;&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/questions&#34;&gt;问答&lt;/a&gt;&lt;/li&gt;&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/teams&#34;&gt;社团&lt;/a&gt;&lt;/li&gt;&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/jobs&#34;&gt;招聘&lt;/a&gt;&lt;/li&gt;&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/wiki&#34;&gt;Wiki&lt;/a&gt;&lt;/li&gt;&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/opensource_projects&#34;&gt;开源项目&lt;span class=&#34;badge-new&#34;&gt;新&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/sites&#34;&gt;酷站&lt;/a&gt;&lt;/li&gt;
+    
+  &lt;/ul&gt;
+&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;ul class=&#34;nav user-bar navbar-nav navbar-right&#34;&gt;
+  &lt;li&gt;&lt;a href=&#34;/account/sign_up&#34;&gt;注册&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;/account/sign_in&#34;&gt;登录&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul class=&#34;nav navbar-nav user-bar navbar-right&#34;&gt;
+  &lt;li class=&#34;nav-search hidden-xs hidden-sm hidden-md&#34;&gt;
+    &lt;form class=&#34;navbar-form form-search active&#34; action=&#34;/search&#34; method=&#34;GET&#34;&gt;
+      &lt;div class=&#34;form-group&#34;&gt;
+        &lt;input class=&#34;form-control&#34; name=&#34;q&#34; type=&#34;text&#34; value=&#34;&#34; placeholder=&#34;搜索本站内容&#34; /&gt;
+      &lt;/div&gt;
+      &lt;i class=&#34;fa btn-search fa-search&#34;&gt;&lt;/i&gt;
+    &lt;/form&gt;
+  &lt;/li&gt;
+
+&lt;/ul&gt;
+
+      &lt;/div&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+
+  
+
+  &lt;div id=&#34;main&#34; class=&#34;main-container container&#34;&gt;
+    
+    
+    
+
+&lt;div class=&#34;row&#34;&gt;
+  &lt;div class=&#34;col-md-9&#34;&gt;
+    &lt;div class=&#34;topic-detail panel panel-default&#34;&gt;
+      &lt;div class=&#34;panel-heading media clearfix&#34;&gt;
+  &lt;div class=&#34;media-body&#34;&gt;
+    &lt;h1 class=&#34;media-heading&#34;&gt;
+      &lt;a class=&#34;node&#34; href=&#34;/topics/node16&#34;&gt;前端测试&lt;/a&gt;
+      &lt;span class=&#34;title&#34;&gt;
+        测试开发之路--UI 自动化常用设计模式
+      &lt;/span&gt;
+      
+    &lt;/h1&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      &lt;a data-author=&#34;true&#34; class=&#34;user-name&#34; data-name=&#34;孙高飞&#34; href=&#34;/ycwdaaaa&#34;&gt;ycwdaaaa&lt;/a&gt;
+      &lt;span class=&#34;hidden-mobile&#34;&gt;
+      &lt;/span&gt;
+       ·
+      &lt;abbr class=&#34;timeago&#34; title=&#34;2018-08-23T00:30:43+08:00&#34; rel=&#34;twipsy&#34;&gt;2018年08月23日&lt;/abbr&gt;
+      &lt;span class=&#34;hidden-mobile&#34;&gt;
+         ·
+        最后由 &lt;a class=&#34;user-name&#34; data-name=&#34;ma499054390&#34; href=&#34;/ma499054390&#34;&gt;ma499054390&lt;/a&gt; 回复于 &lt;abbr class=&#34;timeago&#34; title=&#34;2018-08-27T10:38:28+08:00&#34; rel=&#34;twipsy&#34;&gt;2018年08月27日&lt;/abbr&gt;
+
+       ·
+      1191 次阅读
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+
+        &lt;div class=&#34;label-awesome&#34;&gt;
+          &lt;i class=&#34;fa fa-diamond awesome&#34;&gt;&lt;/i&gt; 本帖已被设为精华帖！
+        &lt;/div&gt;
+
+      &lt;div class=&#34;panel-body markdown markdown-toc&#34;&gt;
+        
+        &lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;接上一次的帖子，今天讲一下我再UI自动化中常用的设计模式。 由于网上已经有非常多的文章详细讲解了设计模式的编码实现，所以我今天也就不讲实现细节了。 就是讲我也讲不出什么花来，只是网上的文章基本都是讲解设计模式的本身实现，很少针对某一领域的实际场景去讲具体改怎么用设计模式。  所以今天我只针对一些实际的场景来说一下如何使用这些设计模式来完善UI自动化。 &lt;/p&gt;
+&lt;h2 id=&#34;工厂&#34;&gt;工厂&lt;/h2&gt;
+&lt;p&gt;每种语言实现设计模式的方式都不一样，这里仅以java为例。 一般来说，工厂模式是为了把创建一个对象的操作都集中在一起管理，其他所有需要用到这个对象的代码都调用工厂类来创建对象。 在UI自动化中，工厂类有一个重要的作用就是提供数据的能力。 这里直接上一个例子， 在我的项目中有这样一个场景， 我们的测试都分模块的， 不同的模块有不同的QA。 测试模型中心模块的QA想要测试的话就需要依赖建模IDE来产出各种各样的模型。  那根据上一个帖子我讲到的一个设计原则--&lt;strong&gt;模块间有数据依赖的时候。每个模块自己负责提供对外接口&lt;/strong&gt;。 模型IDE的QA需要提供一个可以生产出各种不同模型的API来。 如下：&lt;br&gt;
+&lt;img src=&#34;/uploads/photo/2018/564e8dac-8965-4d7f-a207-63afe8118e0e.png!large&#34; title=&#34;&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;上面我们我们用一个简单工厂来实现创建各种模型。 其他模块调用此工厂方法满足自己对模型的需求。  如果我们创建模型的类型更复杂的话，可以引入工厂模式和抽象工厂模式。 但实际上我最常用的还是简单工厂，偶尔用工厂模式抽象工厂基本没用过。使用设计模式的时候最容易出现的是过度设计， 把过于复杂的模式硬搬到项目中来。 这是不可取的。 &lt;/p&gt;
+
+&lt;p&gt;那接下来说一说这个工厂存在的意义吧。 简单工厂算是设计模式里最简单的了， 简单到它几乎不是一个什么模式。 它其实只有一种思想，就是把创建一个&lt;strong&gt;东西&lt;/strong&gt;的操作都统一放到一起，调用方只需要知道我要一个东西，我需要把什么参数传递进来就可以得到这个东西。 比如我们的这个例子里，调用方只需要传递我需要一个什么类型的模型的参数。  至于如何创建这个模型它不需要知道，里面包含了多复杂的UI操作它也不需要知道。 这样做的好处是：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;代码复用，我们使用工厂的来创建的东西一般都是比较复杂的，需要很多的步骤才能创建。 如果只是随便new一下就可以得到的对象也就犯不着专门搞个工厂方法了。 如果任由写case的人根据自己的想法去创建这些对象，不仅造成了很多的重复代码。 而且这些碎片的话的代码在后期的维护上也是一个难以接受的事情。&lt;/li&gt;
+&lt;li&gt;封装变化，我们把创建模型的所有操作都统一放在一起。之后生产模型的操作发生变化，比如需求变动。那我们只需要改动这一处就可以了。而且调用方也完全不感知&lt;/li&gt;
+&lt;li&gt;解耦，就如开始说的那个设计原则一样， 调用方不感知复杂的模型生产过程， 达到解耦的作用。 在UI自动化中，尤其是业务逻辑特别复杂的大型项目中。 多人协作有个比较重要的点在这里提一下。 就是解耦，不要让其他模块的人感知自己模块的任何实现细节。 他们了解的越少，操作的越少， 出错的概率就越小，学习成本就越小。 画地为界，分而治之。 其实我个人觉得整个设计模式就是在解决两件事情：解耦和代码复用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;单例&#34;&gt;单例&lt;/h2&gt;
+&lt;p&gt;我们有了上面的工厂方法来帮助我们创建模型， 但是这里有个问题。 就是我有太多的case依赖这些模型了。 如果每个case都执行一遍上面的操作重新创建一个模型的话会有两个问题：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;UI操作尤其耗时，尤其是生产模型这种异步操作&lt;/li&gt;
+&lt;li&gt;UI本就不稳定，这些重复的操作会增加case失败的概率&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;所以我们希望除了有这种创建新模型的能力之外。 还能够复用之前已经产生的模型。 于是我们就有了使用单例模式的需求。 一般提到单例模式，基本上就是懒汉式，饿汉式什么的。 但这两种大概率都是不可用的。 因为首先我们的操作是延迟加载的，只有到了使用的时候才会去UI上执行创建模型的操作。 总不能直接在类加载的时候就执行吧。 至于在不加锁的情况下判断一下对象是否为null也是不行的。 因为现在的大规模UI自动化都是并发执行的。 所以可选的方案就是加锁的双重检查机制以及静态内部类了。  这里主要讲一下静态内部类吧， 双重检查机制估计大家都玩烂了。 如下：&lt;br&gt;
+&lt;img src=&#34;/uploads/photo/2018/fed6ede5-5ac7-40a3-a475-69198d4fb6fd.png!large&#34; title=&#34;&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;静态内部类不会再LRModel的类加载的时候就加载，而是有人调用getInstance 的时候才会加载。所以保证了延迟加载&lt;/li&gt;
+&lt;li&gt;java 的classloader会保证静态内部类的线程安全，所以不用担心并发的问题&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;上面是静态内部类的实现方式，优点是相较于锁的双重检查方来说实现起来简单，坑少。 比如没有那个经典的指令重排序的问题。 当然缺点也明显， 就是一旦创建对象失败， 那以后就再也没有机会重新创建对象了。 而UI自动化又是出了名的不稳定。 所以还是要慎重的。  &lt;/p&gt;
+&lt;h2 id=&#34;模板&#34;&gt;模板&lt;/h2&gt;
+&lt;p&gt;模板模式在UI自动化中比较常用的原因是在产品中有很多的操作路径是复用的。 所以我们可以使用模板模式， 把固定的路径抽象出来，由子类去实现那些独立的逻辑。 比如：&lt;br&gt;
+&lt;img src=&#34;/uploads/photo/2018/8239c19e-5517-4f08-afd3-287b18fd385c.png!large&#34; title=&#34;&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+上面是我们的产品引入一份数据的逻辑。 我们的数据引入有很多种类型。 比如从本地引入， 从数据库引入，从hdfs引入，从ftp上引入等等等等。但是他们的基本步骤都是一样的(看截图中的注释)， 所以模板模式的思想是使用父类来规定到执行操作的步骤， 为了代码复用所以也会实现一些通用的步骤比如所有的引入都得点击某些button，填写一些都行。 然后留下一些abstract的方法给子类实现。 这种父类规定骨架，子类实现细节的方式就是模板方法了。 在这里我们的父类定义好了所有的步骤，但是部分的具体实现细节由子类完成。 这里我们发现子类需要实现两个方法&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;每个数据引入的关于生成table的操作的setTableConfig&lt;/li&gt;
+&lt;li&gt;每种数据引入的文件配置方式操作的setFileConfig&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;当然模板方法也是可以有较深的结构的。 比如上面说的一些引入方式虽然都属于数据引入，但是也分为两大类， 一个是结构化数据，一个是图片数据。 而且凡是属于结构化数据的引入方式有很多步骤都是相同的。 凡是属于图片数据引入的方式的大部分步骤也是相同的。 所以我们继续有抽象类如下：&lt;br&gt;
+&lt;img src=&#34;/uploads/photo/2018/1fce10e2-6c48-4593-8fe0-862057289447.png!large&#34; title=&#34;&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;上面是结构化数据的抽象类。 他实现了父类IDataload的setTableConfig方法。 因为所有结构化数据引入的这个页面操作都是一样的。然后才是我们具体的本地文件的数据引入的类。如下。&lt;br&gt;
+&lt;img src=&#34;/uploads/photo/2018/da645aae-d764-40ab-979b-33c765436bdb.png!large&#34; title=&#34;&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;这个具体的本地文件引入的类实现了方法setFileConfig。  这样我们就看到了这个模板模式的全貌。  &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;基类IDataload负责定义执行步骤，以及个别UI操作的实现。 规定子类必须实现setTableConfig和setFileConfig这两个方法&lt;/li&gt;
+&lt;li&gt;类StructureDataLoad继承基类IDataload，并实现了setTableConfig方法。 因为所有的结构化数据引入在这里使用的是同样的页面&lt;/li&gt;
+&lt;li&gt;具体的实现类LocalFileDataLoad继承StructureDataLoad，代表着本地数据引入并实现了针对于本地文件引入所独有的页面操作setFileConfig&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;所以实际上调用方要做的事情就是这样的&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/uploads/photo/2018/a8d731b6-509a-46f0-a592-5d480ce62c81.png!large&#34; title=&#34;&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;模板模式的优点：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;代码复用， UI上很多操作路径都是重复的，甚至说不同的业务流程操作中的部分页面使用的是相同的页面。 使用模板模式可以很好的整理我们的代码结构，将业务逻辑分类并组织起来，可以服用的代码由上层的父类实现。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;模板模式的缺点：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;如果类层级结构较多的时候，维护起来有点麻烦。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;策略&#34;&gt;策略&lt;/h2&gt;
+&lt;p&gt;策略模式也是非常常用的， 甚至很多时候它是其他模式的基础。 它的思想也特别简单。 当初它诞生的原因是为了摆脱大量的if else， 把每个条件分支做一个策略类。 具体原理我就不介绍了，不知道的可以google一下，网上一堆讲设计模式的文章，我也讲不出什么花来，我就讲在UI自动化中我们怎么做。 举一个最简单的例子。如下：&lt;/p&gt;
+
+&lt;p&gt;在我们的测试中，大量的case都需要经过如下的操作步骤：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;打开浏览器&lt;/li&gt;
+&lt;li&gt;登录&lt;/li&gt;
+&lt;li&gt;进入模型IDE页面&lt;/li&gt;
+&lt;li&gt;创建一个工程&lt;/li&gt;
+&lt;li&gt;创建一个DAG&lt;/li&gt;
+&lt;li&gt;在DAG页面上build一个DAG&lt;/li&gt;
+&lt;li&gt;运行DAG并等待运行结束&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;既然大量的case都需要执行上面的操作，那我们当然就希望能做到代码复用，所以就写了一个方法来做这个事情。 但是我们发现这些步骤中有一个操作是无法预测的。 也就是如何Build一个DAG， 我们的产品的DAG如下&lt;br&gt;
+&lt;img src=&#34;/uploads/photo/2018/7353334f-0b8f-4acb-95b0-13f24e3f34a4.png!large&#34; title=&#34;&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;每个DAG中都有不同的算子组合在一起，形成一个图形。并且每个算子有它不同的配置。 要在UI上build一个DAG还是需要很多的操作的。 并且case之间要build的DAG的图形也是不一样的。 有的case需要5个算子组成一个图形， 有的case可能需要10个算子组成一个图形。 这些是完全不一样的操作， 也就是说虽然我们想写一个方法来封装上面所有的操作。但是其中构建DAG这一步是我们预先控制不了也复用不了的。这怎么办？ 所以我们索性把build DAG的操作定义为一个接口。 如下：&lt;br&gt;
+&lt;img src=&#34;/uploads/photo/2018/0a0d51ca-61a0-4083-b71b-08eacbd692fc.png!large&#34; title=&#34;&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;它只有一个方法，就是build()， 意思是这个方法要实现build一个DAG的操作。 但具体build一个什么图形什么配置的DAG， 由子类自己实现。 &lt;br&gt;
+于是我们有了很多固定图形的dag的子类， 他们分别实现不同的固定图形的build 操作。 如下：&lt;br&gt;
+&lt;img src=&#34;/uploads/photo/2018/16558604-6499-408b-a0c8-bacd17bf113f.png!large&#34; title=&#34;&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;于是我们创建这个可以用来复用的方法：&lt;br&gt;
+&lt;img src=&#34;/uploads/photo/2018/a233cc07-269a-4d5a-9f67-2bdb0f434d50.png!large&#34; title=&#34;&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;可以看到这个方法里我们执行了上面说的所有的步骤，比如打开浏览器，登录，跳转页面，创建工程等。 但是在build一个dag的时候，我们依赖一个DagBuilder类型的参数，也就是我们之前的定义的那个接口，当然这个dagbuilder使用了建造者模式，这个我们之后会讲。 现在我们在case中就可以很愉快的使用很少量的代码完成测试了。 如下：&lt;br&gt;
+&lt;img src=&#34;/uploads/photo/2018/69688a59-afc0-4929-bbc6-e364620d1b39.png!large&#34; title=&#34;&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;当然熟悉函数式编程的同学会觉得这玩意非常眼熟。 实际上在java8中也完全可以使用lamda表达式来完成DagBuilder的构造&lt;/p&gt;
+&lt;h2 id=&#34;建造者&#34;&gt;建造者&lt;/h2&gt;
+&lt;p&gt;这里会涉及到建造者，策略和工厂三种模式的混合使用。可能会比较啰嗦还请大家耐心看完。&lt;/p&gt;
+
+&lt;p&gt;建造者模式和工厂模式都是用来创建对象的。 建造者模式适用于一个对象的内部有特别多的属性需要外部来传递的情况。 比如在上一个说策略模式的例子中。我们把Dagbuilder作为策略类，在case调用的时候动态传递一个具体的Dagbuilder类型决定如何build一个DAG. 那么刚才我们也看到了一个DAG是非常复杂的，里面有不同的图形， 并且即便图形固定了， 但是里面的算子的类型和配置可能都会变化。  比如，按照上面的一个通用的模型训练的DAG图形， 我们就可以用下面的代码来构建。&lt;br&gt;
+&lt;img src=&#34;/uploads/photo/2018/ae7d8bab-b4de-4fb2-a59b-ad0a20399c1b.png!large&#34; title=&#34;&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+可以看到上面每个一个node的importToDag的方法中都会有两个int类型的数字参数。 这个意思是将算子拖拽到DAG中的哪一个点上。 并且link方法用来连接两个算子， build方法会执行UI操作配置当前算子。 通过这样一段代码就可以构建出上面讲策略模式的时候，截图中的那个DAG图形。 我们会发现非常多的case都会用到这个图形。 比如测试所有的模型训练算法的时候， 都是走这个DAG图形的。 所以我们理所应当的会想把这个图形封装起来给很多个case使用。 但是虽然case使用的图形一样，可是每个算子的配置可能是不一样的， 而且可能在某一个节点上使用的算子都是不一样的，这需要调用方动态的传递。 所以builder(建造者)模式是一个包含了很多个零件的对象， 它封装了如何操作这些组件创造出最终调用方想要的东西。但是需要调用方自由的传递这些不同的零件给builder。  首先我们看看这个DAG的builder类中定义要使用的零件。&lt;br&gt;
+&lt;img src=&#34;/uploads/photo/2018/67ccaa46-e4cd-48a2-839b-58bed6580d65.png!large&#34; title=&#34;&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;上面是我们构建这个模型训练双输入DAG所需要的零件。 可以看到由一个数据节点，一个数据拆分算子，两个特征抽取，一个模型训练，一个模型预测和一个模型预估组成。  而且这些零件都分别有set方法让调用方来设置。然后我们就可以在builder的build方法里使用本节里一开始贴出的代码来动态的构建图形了。&lt;/p&gt;
+&lt;h5 id=&#34;策略模式的混用&#34;&gt;策略模式的混用&lt;/h5&gt;
+&lt;p&gt;这里需要注意一点的是，这些零件大部分都是具体的实体类。 但是有些不是，比如模型训练算法，我们规定的是一个抽象类型。 如下：&lt;br&gt;
+&lt;img src=&#34;/uploads/photo/2018/939ea2de-a127-463b-a16d-be4eb78c8293.png!large&#34; title=&#34;&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;为什么这么做呢，因为对于所有要测试模型训练的case来说。 图形是固定的， 某些算法也是固定的。 不论测试什么模型训练算法，都是一个数据下面连接数据拆分算法，再下面连接两个特征抽取算法。 也就是说对于模型训练算法来说，这些流程都是固定的，我们实现就知道该拉取什么样的算子，只是配置需要调用方动态传递。 但是测试的时候我们有各种不同的模型训练算法，这些可不是配置不同，而是连算子都变了， 所以我们把模型训练算法抽象成策略类。我不需要知道到底该拉取哪一个算子，让调用方动态传递就好了。 只要它传递的是我规定的策略类型，有规定的方法来设置这个算子就可以了。&lt;/p&gt;
+&lt;h5 id=&#34;工厂模式的混用&#34;&gt;工厂模式的混用&lt;/h5&gt;
+&lt;p&gt;根据上面的策略模式和建造者模式的混用我们就可以比较方便的构建DAG图形给case使用了。 但是还是有一点麻烦。那就是一个builder需要传递的零件太多了。这个体验有点不友好。 而且我们发现在大多数的模型训练测试场景下，我们只关心模型训练算法的配置参数，而不是很在意其他算法的配置是什么样子的。 这种场景下让我一个一个的去传递这些零件还是有点麻烦。 或者说在有些情况下，我们是可以动态的推导出其他算子的配置的。 比如我这次要测试的是逻辑回归这个算子。  那么逻辑回归是一种二分类算子，那么其实它只能使用二分类的数据，特征抽取算法中只能使用二分类的label处理， 相应的下面也只能连接二分类算子的预测和评估算子。 这些都是我们可以动态推导出来的。 没有必要让使用者一个一个的去传递。所以我们在builder外面再包一层工厂， 一个创建builder的工厂。如下：&lt;br&gt;
+&lt;img src=&#34;/uploads/photo/2018/a20c1f0c-bb68-4e84-a3b6-2d755f5bcb3a.png!large&#34; title=&#34;&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;如上图，根据传递的模型训练算子的类型找到预先导入的数据，配置好特征抽取，推导出所有依赖的算子配置后。 配置好这个builder并返回给调用方。这样我们通过之前讲的fastCreateDag的策略模式的例子。 就可以在case中只写入非常少量的代码就完成了测试用例的编写：&lt;/p&gt;
+ &lt;pre class=&#34;highlight java&#34;&gt;&lt;code&gt;&lt;span class=&#34;nd&#34;&gt;@Features&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Feature&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;ModelIde&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;nd&#34;&gt;@Stories&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Story&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;LR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;nd&#34;&gt;@Description&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&#34;GBDT双输入&#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;nd&#34;&gt;@Test&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;doubleInputGBDT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(){&lt;/span&gt;&lt;br&gt;        &lt;span class=&#34;n&#34;&gt;fastCreateDag&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Common&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;randomString&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&#34;GBDT2Input&#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DagBuilderFactory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getDoubleInputBuilder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GBDTNode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()))&lt;/span&gt;&lt;br&gt;                &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;br&gt;                &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;waitUntil&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DagStatus&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;SUCCESS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;br&gt;&lt;br&gt;    &lt;span class=&#34;nd&#34;&gt;@Features&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Feature&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;ModelIde&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;nd&#34;&gt;@Stories&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Story&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;LR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;nd&#34;&gt;@Description&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&#34;SVM双输入&#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;nd&#34;&gt;@Test&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;doubleInputSVM&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(){&lt;/span&gt;&lt;br&gt;        &lt;span class=&#34;n&#34;&gt;fastCreateDag&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Common&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;randomString&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&#34;SVM2Input&#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DagBuilderFactory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getDoubleInputBuilder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SVMNode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()))&lt;/span&gt;&lt;br&gt;                &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;br&gt;                &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;waitUntil&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DagStatus&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;SUCCESS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;&lt;br&gt;&lt;br&gt;    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;    &lt;span class=&#34;nd&#34;&gt;@Features&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Feature&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;ModelIde&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;nd&#34;&gt;@Stories&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Story&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;LR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;nd&#34;&gt;@Description&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&#34;hetreenet双输入&#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;nd&#34;&gt;@Test&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;doubleInputHeTreeNet&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(){&lt;/span&gt;&lt;br&gt;        &lt;span class=&#34;n&#34;&gt;fastCreateDag&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Common&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;randomString&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&#34;he2Input&#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DagBuilderFactory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getDoubleInputBuilder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;HETreeNetNode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()))&lt;/span&gt;&lt;br&gt;                &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;br&gt;                &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;waitUntil&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DagStatus&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;SUCCESS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;&lt;br&gt;&lt;br&gt;    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;br&gt;&lt;br&gt;    &lt;span class=&#34;nd&#34;&gt;@Features&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Feature&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;ModelIde&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;nd&#34;&gt;@Stories&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Story&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;LR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;nd&#34;&gt;@Description&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&#34;gbrt双输入&#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;nd&#34;&gt;@Test&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;doubleInputGbrt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(){&lt;/span&gt;&lt;br&gt;        &lt;span class=&#34;n&#34;&gt;fastCreateDag&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Common&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;randomString&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&#34;GBRT2Input&#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DagBuilderFactory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getDoubleInputBuilder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GBRTNode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()))&lt;/span&gt;&lt;br&gt;                &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;br&gt;                &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;waitUntil&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DagStatus&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;SUCCESS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;&lt;br&gt;&lt;br&gt;    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;br&gt;&lt;br&gt;    &lt;span class=&#34;nd&#34;&gt;@Features&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Feature&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;ModelIde&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;nd&#34;&gt;@Stories&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Story&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;LR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;nd&#34;&gt;@Description&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&#34;线性回归双输入&#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;nd&#34;&gt;@Test&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;doubleInputLinearRegression&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(){&lt;/span&gt;&lt;br&gt;        &lt;span class=&#34;n&#34;&gt;fastCreateDag&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Common&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;randomString&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&#34;linearR&#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DagBuilderFactory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getDoubleInputBuilder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LinearRegressionNode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()))&lt;/span&gt;&lt;br&gt;                &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;br&gt;                &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;waitUntil&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DagStatus&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;SUCCESS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;&lt;br&gt;&lt;br&gt;    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;br&gt;&lt;br&gt;    &lt;span class=&#34;nd&#34;&gt;@Features&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Feature&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;ModelIde&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;nd&#34;&gt;@Stories&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Story&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;LR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;nd&#34;&gt;@Description&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&#34;线性分型回归双输入&#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;nd&#34;&gt;@Test&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;doubleInputLFCRegression&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(){&lt;/span&gt;&lt;br&gt;        &lt;span class=&#34;n&#34;&gt;fastCreateDag&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Common&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;randomString&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&#34;LFCRe&#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DagBuilderFactory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getDoubleInputBuilder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LFCRegressionNode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()))&lt;/span&gt;&lt;br&gt;                &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;br&gt;                &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;waitUntil&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DagStatus&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;SUCCESS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;&lt;br&gt;&lt;br&gt;    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;br&gt;&lt;br&gt;    &lt;span class=&#34;nd&#34;&gt;@Features&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Feature&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;ModelIde&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;nd&#34;&gt;@Stories&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Story&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;LR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;nd&#34;&gt;@Description&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&#34;逻辑回归多分类双输入&#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;nd&#34;&gt;@Test&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;doubleInputLRMultiClass&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(){&lt;/span&gt;&lt;br&gt;        &lt;span class=&#34;n&#34;&gt;fastCreateDag&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Common&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;randomString&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&#34;LRMulti&#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DagBuilderFactory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getDoubleInputBuilder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LRMultiClassNode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()))&lt;/span&gt;&lt;br&gt;                &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;br&gt;                &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;waitUntil&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DagStatus&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;SUCCESS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;&lt;br&gt;&lt;br&gt;    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;可以看到上面的每一个模型训练的case的代码量都非常的少。&lt;/p&gt;
+&lt;h2 id=&#34;结尾&#34;&gt;结尾&lt;/h2&gt;
+&lt;p&gt;又12点多了今天就写到这吧。  以后有时间再继续更新设计模式相关的东西。&lt;/p&gt;
+
+        
+      &lt;/div&gt;
+
+
+
+      &lt;div class=&#34;panel-footer clearfix&#34;&gt;
+        &lt;div class=&#34;opts&#34;&gt;
+    &lt;a title=&#34;赞&#34; data-count=&#34;24&#34; data-state=&#34;deactive&#34; data-type=&#34;Topic&#34; data-id=&#34;15768&#34; class=&#34;likeable deactive&#34; href=&#34;#&#34;&gt;&lt;i class=&#39;fa fa-heart&#39;&gt;&lt;/i&gt; &lt;span&gt;24 个赞&lt;/span&gt;&lt;/a&gt;
+    
+    
+
+  &lt;span class=&#34;pull-right opts&#34;&gt;
+    &lt;a target=&#34;_blank&#34; title=&#34;微信排版&#34; href=&#34;/topics/15768/show_wechat&#34;&gt;&lt;i class=&#39;fa fa-weixin&#39;&gt;&lt;/i&gt;&lt;/a&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&#34;alert alert-block topic-copyright&#34;&gt;
+  &lt;div class=&#34;markdown&#34;&gt;
+   转载文章时务必注明原作者及原始链接，并注明「发表于 TesterHome 」，并不得对作品进行修改。
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;div class=&#34;topic-reward&#34;&gt;
+  &lt;div class=&#34;media-body&#34;&gt;
+    &lt;strong&gt;如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作！&lt;/strong&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;media-right&#34;&gt;
+    &lt;a class=&#34;btn btn-success&#34; data-remote=&#34;true&#34; href=&#34;/ycwdaaaa/reward&#34;&gt;&lt;i class=&#39;fa fa-qrcode&#39;&gt;&lt;/i&gt; &lt;span&gt;打赏支持&lt;/span&gt;&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+    &lt;!--先显示最佳回复--&gt;
+
+    &lt;div id=&#34;replies&#34; class=&#34;panel panel-default&#34; data-last-floor=&#34;11&#34;&gt;
+      &lt;div class=&#34;total panel-heading hide-ios&#34;&gt;
+        &lt;span class=&#34;total-info&#34;&gt;
+        共收到 &lt;b&gt;9&lt;/b&gt; 条回复
+        &lt;/span&gt;
+        &lt;span class=&#34;pull-right&#34;&gt;
+          &lt;a data-toggle=&#34;tooltip&#34; data-original-title=&#34;按创建时间排序&#34; class=&#34;btn btn-default btn-sm &#34; href=&#34;?order_by=created_at&amp;#replies&#34;&gt;时间&lt;/a&gt;
+          &lt;a data-toggle=&#34;tooltip&#34; data-original-title=&#34;按回复点赞数量排序&#34; class=&#34;btn btn-default btn-sm &#34; href=&#34;?order_by=like&amp;#replies&#34; &gt;点赞&lt;/a&gt;
+        &lt;/span&gt;
+
+      &lt;/div&gt;
+
+      &lt;div class=&#34;items panel-body&#34;&gt;
+        &lt;div class=&#34;reply reply-system&#34; data-id=&#34;118676&#34; id=&#34;reply1&#34;&gt;
+  &lt;div id=&#34;reply-118676&#34; data-floor=&#34;1&#34;&gt;
+      &lt;a title=&#34;Lihuazhang (恒温)&#34; href=&#34;/Lihuazhang&#34;&gt;&lt;img class=&#34;media-object avatar-16&#34; src=&#34;/uploads/user/avatar/110.jpg!xs&#34; /&gt;&lt;/a&gt; &lt;a class=&#34;user-name&#34; data-name=&#34;恒温&#34; href=&#34;/Lihuazhang&#34;&gt;Lihuazhang&lt;/a&gt;
+将本帖设为了精华贴
+
+&lt;span class=&#39;time&#39;&gt;08月23日 08:24&lt;/span&gt;
+
+
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;reply&#34; data-id=&#34;118677&#34; id=&#34;reply2&#34;&gt;
+  &lt;div id=&#34;reply-118677&#34; data-floor=&#34;2&#34;&gt;
+      &lt;div class=&#34;avatar&#34;&gt;&lt;a title=&#34;xuwangcheng14 (徐汪成)&#34; href=&#34;/xuwangcheng14&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/23590/2e0251.jpg!md&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
+      &lt;div class=&#34;infos&#34;&gt;
+        &lt;div class=&#34;info&#34;&gt;
+          &lt;span class=&#34;name&#34;&gt;
+            &lt;a class=&#34;user-name&#34; data-name=&#34;徐汪成&#34; href=&#34;/xuwangcheng14&#34;&gt;xuwangcheng14&lt;/a&gt;
+          &lt;/span&gt;
+          &lt;span class=&#34;sub-info&#34;&gt;
+            &lt;span class=&#39;floor&#39;&gt;#2&lt;/span&gt; ·
+            &lt;a class=&#34;time&#34; href=&#34;#reply-118677&#34;&gt;&lt;abbr class=&#34;timeago&#34; title=&#34;2018-08-23T09:10:06+08:00&#34; rel=&#34;twipsy&#34;&gt;2018年08月23日&lt;/abbr&gt;&lt;/a&gt;
+          &lt;/span&gt;
+
+
+          &lt;span class=&#34;opts  pull-right&#34;&gt;
+              &lt;span class=&#34;hideable&#34;&gt;
+              &lt;a class=&#34;edit fa fa-pencil&#34; data-uid=&#34;23590&#34; title=&#34;修改回帖&#34; href=&#34;/topics/15768/replies/118677/edit&#34;&gt;&lt;/a&gt;
+
+                &lt;a data-uid=&#34;7606&#34; class=&#34;suggest&#34; title=&#34;设为最佳回复&#34; data-remote=&#34;true&#34; rel=&#34;nofollow&#34; data-method=&#34;post&#34; href=&#34;/topics/15768/replies/118677/reply_suggest&#34;&gt;&lt;i class=&#39;fa fa-check&#39;&gt;&lt;/i&gt;&lt;/a&gt;
+
+              &lt;a data-id=&#34;118677&#34; data-login=&#34;xuwangcheng14&#34; title=&#34;回复此楼&#34; class=&#34;btn-reply fa fa-mail-reply&#34; href=&#34;#&#34;&gt;&lt;/a&gt;
+              &lt;/span&gt;
+              &lt;a title=&#34;赞&#34; data-count=&#34;0&#34; data-state=&#34;deactive&#34; data-type=&#34;Reply&#34; data-id=&#34;118677&#34; class=&#34;likeable deactive&#34; href=&#34;#&#34;&gt;&lt;i class=&#39;fa fa-heart&#39;&gt;&lt;/i&gt; &lt;span&gt;&lt;/span&gt;&lt;/a&gt;
+          &lt;/span&gt;
+        &lt;/div&gt;
+        
+        &lt;div class=&#34;markdown&#34;&gt;
+          &lt;p&gt;高级啊。&lt;br&gt;
+感觉一般作自动化测试的想不到这么深的东西。&lt;/p&gt;
+
+&lt;p&gt;还是得努力学习！！！&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;reply&#34; data-id=&#34;118683&#34; id=&#34;reply3&#34;&gt;
+  &lt;div id=&#34;reply-118683&#34; data-floor=&#34;3&#34;&gt;
+      &lt;div class=&#34;avatar&#34;&gt;&lt;a title=&#34;sxazf (再见理想)&#34; href=&#34;/sxazf&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/15802/352286.jpg!md&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
+      &lt;div class=&#34;infos&#34;&gt;
+        &lt;div class=&#34;info&#34;&gt;
+          &lt;span class=&#34;name&#34;&gt;
+            &lt;a class=&#34;user-name&#34; data-name=&#34;再见理想&#34; href=&#34;/sxazf&#34;&gt;sxazf&lt;/a&gt;
+          &lt;/span&gt;
+          &lt;span class=&#34;sub-info&#34;&gt;
+            &lt;span class=&#39;floor&#39;&gt;#3&lt;/span&gt; ·
+            &lt;a class=&#34;time&#34; href=&#34;#reply-118683&#34;&gt;&lt;abbr class=&#34;timeago&#34; title=&#34;2018-08-23T09:43:06+08:00&#34; rel=&#34;twipsy&#34;&gt;2018年08月23日&lt;/abbr&gt;&lt;/a&gt;
+          &lt;/span&gt;
+
+
+          &lt;span class=&#34;opts  pull-right&#34;&gt;
+              &lt;span class=&#34;hideable&#34;&gt;
+              &lt;a class=&#34;edit fa fa-pencil&#34; data-uid=&#34;15802&#34; title=&#34;修改回帖&#34; href=&#34;/topics/15768/replies/118683/edit&#34;&gt;&lt;/a&gt;
+
+                &lt;a data-uid=&#34;7606&#34; class=&#34;suggest&#34; title=&#34;设为最佳回复&#34; data-remote=&#34;true&#34; rel=&#34;nofollow&#34; data-method=&#34;post&#34; href=&#34;/topics/15768/replies/118683/reply_suggest&#34;&gt;&lt;i class=&#39;fa fa-check&#39;&gt;&lt;/i&gt;&lt;/a&gt;
+
+              &lt;a data-id=&#34;118683&#34; data-login=&#34;sxazf&#34; title=&#34;回复此楼&#34; class=&#34;btn-reply fa fa-mail-reply&#34; href=&#34;#&#34;&gt;&lt;/a&gt;
+              &lt;/span&gt;
+              &lt;a title=&#34;赞&#34; data-count=&#34;0&#34; data-state=&#34;deactive&#34; data-type=&#34;Reply&#34; data-id=&#34;118683&#34; class=&#34;likeable deactive&#34; href=&#34;#&#34;&gt;&lt;i class=&#39;fa fa-heart&#39;&gt;&lt;/i&gt; &lt;span&gt;&lt;/span&gt;&lt;/a&gt;
+          &lt;/span&gt;
+        &lt;/div&gt;
+        
+        &lt;div class=&#34;markdown&#34;&gt;
+          &lt;p&gt;&lt;a href=&#34;http://zhangfei.link&#34; rel=&#34;nofollow&#34; target=&#34;_blank&#34;&gt;http://zhangfei.link&lt;/a&gt; 这里面也做了些总结，互相学习一下！&lt;img title=&#34;:grinning:&#34; alt=&#34;😀&#34; src=&#34;https://twemoji.b0.upaiyun.com/2/svg/1f600.svg&#34; class=&#34;twemoji&#34;&gt; &lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;reply&#34; data-id=&#34;118703&#34; id=&#34;reply4&#34;&gt;
+  &lt;div id=&#34;reply-118703&#34; data-floor=&#34;4&#34;&gt;
+      &lt;div class=&#34;avatar&#34;&gt;&lt;a title=&#34;baizhi (白纸)&#34; href=&#34;/baizhi&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/8986/ae4f4b.jpg!md&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
+      &lt;div class=&#34;infos&#34;&gt;
+        &lt;div class=&#34;info&#34;&gt;
+          &lt;span class=&#34;name&#34;&gt;
+            &lt;a class=&#34;user-name&#34; data-name=&#34;白纸&#34; href=&#34;/baizhi&#34;&gt;baizhi&lt;/a&gt;
+          &lt;/span&gt;
+          &lt;span class=&#34;sub-info&#34;&gt;
+            &lt;span class=&#39;floor&#39;&gt;#4&lt;/span&gt; ·
+            &lt;a class=&#34;time&#34; href=&#34;#reply-118703&#34;&gt;&lt;abbr class=&#34;timeago&#34; title=&#34;2018-08-23T10:27:03+08:00&#34; rel=&#34;twipsy&#34;&gt;2018年08月23日&lt;/abbr&gt;&lt;/a&gt;
+          &lt;/span&gt;
+
+
+          &lt;span class=&#34;opts  pull-right&#34;&gt;
+              &lt;span class=&#34;hideable&#34;&gt;
+              &lt;a class=&#34;edit fa fa-pencil&#34; data-uid=&#34;8986&#34; title=&#34;修改回帖&#34; href=&#34;/topics/15768/replies/118703/edit&#34;&gt;&lt;/a&gt;
+
+                &lt;a data-uid=&#34;7606&#34; class=&#34;suggest&#34; title=&#34;设为最佳回复&#34; data-remote=&#34;true&#34; rel=&#34;nofollow&#34; data-method=&#34;post&#34; href=&#34;/topics/15768/replies/118703/reply_suggest&#34;&gt;&lt;i class=&#39;fa fa-check&#39;&gt;&lt;/i&gt;&lt;/a&gt;
+
+              &lt;a data-id=&#34;118703&#34; data-login=&#34;baizhi&#34; title=&#34;回复此楼&#34; class=&#34;btn-reply fa fa-mail-reply&#34; href=&#34;#&#34;&gt;&lt;/a&gt;
+              &lt;/span&gt;
+              &lt;a title=&#34;赞&#34; data-count=&#34;0&#34; data-state=&#34;deactive&#34; data-type=&#34;Reply&#34; data-id=&#34;118703&#34; class=&#34;likeable deactive&#34; href=&#34;#&#34;&gt;&lt;i class=&#39;fa fa-heart&#39;&gt;&lt;/i&gt; &lt;span&gt;&lt;/span&gt;&lt;/a&gt;
+          &lt;/span&gt;
+        &lt;/div&gt;
+          &lt;div class=&#34;reply-to-block&#34; data-reply-to-id=&#34;118683&#34;&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      对
+        &lt;a data-remote=&#34;true&#34; href=&#34;/topics/15768/replies/118703/reply_to&#34;&gt;
+          &lt;img class=&#34;media-object avatar-16&#34; src=&#34;/uploads/user/avatar/15802/352286.jpg!xs&#34; /&gt;&lt;span class=&#34;user-name&#34;&gt;sxazf&lt;/span&gt;
+          &lt;span class=&#39;reply-floor&#39;&gt;&lt;/span&gt;
+&lt;/a&gt;      回复
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+        &lt;div class=&#34;markdown&#34;&gt;
+          &lt;p&gt;张飞...我买过你的材料&lt;img title=&#34;:joy:&#34; alt=&#34;😂&#34; src=&#34;https://twemoji.b0.upaiyun.com/2/svg/1f602.svg&#34; class=&#34;twemoji&#34;&gt; &lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;reply&#34; data-id=&#34;118705&#34; id=&#34;reply5&#34;&gt;
+  &lt;div id=&#34;reply-118705&#34; data-floor=&#34;5&#34;&gt;
+      &lt;div class=&#34;avatar&#34;&gt;&lt;a title=&#34;sxazf (再见理想)&#34; href=&#34;/sxazf&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/15802/352286.jpg!md&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
+      &lt;div class=&#34;infos&#34;&gt;
+        &lt;div class=&#34;info&#34;&gt;
+          &lt;span class=&#34;name&#34;&gt;
+            &lt;a class=&#34;user-name&#34; data-name=&#34;再见理想&#34; href=&#34;/sxazf&#34;&gt;sxazf&lt;/a&gt;
+          &lt;/span&gt;
+          &lt;span class=&#34;sub-info&#34;&gt;
+            &lt;span class=&#39;floor&#39;&gt;#5&lt;/span&gt; ·
+            &lt;a class=&#34;time&#34; href=&#34;#reply-118705&#34;&gt;&lt;abbr class=&#34;timeago&#34; title=&#34;2018-08-23T10:38:31+08:00&#34; rel=&#34;twipsy&#34;&gt;2018年08月23日&lt;/abbr&gt;&lt;/a&gt;
+          &lt;/span&gt;
+
+
+          &lt;span class=&#34;opts  pull-right&#34;&gt;
+              &lt;span class=&#34;hideable&#34;&gt;
+              &lt;a class=&#34;edit fa fa-pencil&#34; data-uid=&#34;15802&#34; title=&#34;修改回帖&#34; href=&#34;/topics/15768/replies/118705/edit&#34;&gt;&lt;/a&gt;
+
+                &lt;a data-uid=&#34;7606&#34; class=&#34;suggest&#34; title=&#34;设为最佳回复&#34; data-remote=&#34;true&#34; rel=&#34;nofollow&#34; data-method=&#34;post&#34; href=&#34;/topics/15768/replies/118705/reply_suggest&#34;&gt;&lt;i class=&#39;fa fa-check&#39;&gt;&lt;/i&gt;&lt;/a&gt;
+
+              &lt;a data-id=&#34;118705&#34; data-login=&#34;sxazf&#34; title=&#34;回复此楼&#34; class=&#34;btn-reply fa fa-mail-reply&#34; href=&#34;#&#34;&gt;&lt;/a&gt;
+              &lt;/span&gt;
+              &lt;a title=&#34;赞&#34; data-count=&#34;0&#34; data-state=&#34;deactive&#34; data-type=&#34;Reply&#34; data-id=&#34;118705&#34; class=&#34;likeable deactive&#34; href=&#34;#&#34;&gt;&lt;i class=&#39;fa fa-heart&#39;&gt;&lt;/i&gt; &lt;span&gt;&lt;/span&gt;&lt;/a&gt;
+          &lt;/span&gt;
+        &lt;/div&gt;
+          &lt;div class=&#34;reply-to-block&#34; data-reply-to-id=&#34;118703&#34;&gt;
+    &lt;div class=&#34;info&#34;&gt;
+      对
+        &lt;a data-remote=&#34;true&#34; href=&#34;/topics/15768/replies/118705/reply_to&#34;&gt;
+          &lt;img class=&#34;media-object avatar-16&#34; src=&#34;/uploads/user/avatar/8986/ae4f4b.jpg!xs&#34; /&gt;&lt;span class=&#34;user-name&#34;&gt;baizhi&lt;/span&gt;
+          &lt;span class=&#39;reply-floor&#39;&gt;&lt;/span&gt;
+&lt;/a&gt;      回复
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+        &lt;div class=&#34;markdown&#34;&gt;
+          &lt;p&gt;希望对你有帮助！&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;reply&#34; data-id=&#34;118706&#34; id=&#34;reply6&#34;&gt;
+  &lt;div id=&#34;reply-118706&#34; data-floor=&#34;6&#34;&gt;
+      &lt;div class=&#34;avatar&#34;&gt;&lt;a title=&#34;zailushang (zailushang)&#34; href=&#34;/zailushang&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/2203/ef9cd1.jpeg!md&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
+      &lt;div class=&#34;infos&#34;&gt;
+        &lt;div class=&#34;info&#34;&gt;
+          &lt;span class=&#34;name&#34;&gt;
+            &lt;a class=&#34;user-name&#34; data-name=&#34;zailushang&#34; href=&#34;/zailushang&#34;&gt;zailushang&lt;/a&gt;
+          &lt;/span&gt;
+          &lt;span class=&#34;sub-info&#34;&gt;
+            &lt;span class=&#39;floor&#39;&gt;#6&lt;/span&gt; ·
+            &lt;a class=&#34;time&#34; href=&#34;#reply-118706&#34;&gt;&lt;abbr class=&#34;timeago&#34; title=&#34;2018-08-23T10:39:58+08:00&#34; rel=&#34;twipsy&#34;&gt;2018年08月23日&lt;/abbr&gt;&lt;/a&gt;
+          &lt;/span&gt;
+
+
+          &lt;span class=&#34;opts  pull-right&#34;&gt;
+              &lt;span class=&#34;hideable&#34;&gt;
+              &lt;a class=&#34;edit fa fa-pencil&#34; data-uid=&#34;2203&#34; title=&#34;修改回帖&#34; href=&#34;/topics/15768/replies/118706/edit&#34;&gt;&lt;/a&gt;
+
+                &lt;a data-uid=&#34;7606&#34; class=&#34;suggest&#34; title=&#34;设为最佳回复&#34; data-remote=&#34;true&#34; rel=&#34;nofollow&#34; data-method=&#34;post&#34; href=&#34;/topics/15768/replies/118706/reply_suggest&#34;&gt;&lt;i class=&#39;fa fa-check&#39;&gt;&lt;/i&gt;&lt;/a&gt;
+
+              &lt;a data-id=&#34;118706&#34; data-login=&#34;zailushang&#34; title=&#34;回复此楼&#34; class=&#34;btn-reply fa fa-mail-reply&#34; href=&#34;#&#34;&gt;&lt;/a&gt;
+              &lt;/span&gt;
+              &lt;a title=&#34;赞&#34; data-count=&#34;0&#34; data-state=&#34;deactive&#34; data-type=&#34;Reply&#34; data-id=&#34;118706&#34; class=&#34;likeable deactive&#34; href=&#34;#&#34;&gt;&lt;i class=&#39;fa fa-heart&#39;&gt;&lt;/i&gt; &lt;span&gt;&lt;/span&gt;&lt;/a&gt;
+          &lt;/span&gt;
+        &lt;/div&gt;
+        
+        &lt;div class=&#34;markdown&#34;&gt;
+          &lt;p&gt;看飞哥写的东西，就两个字，高级&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;reply&#34; data-id=&#34;118707&#34; id=&#34;reply7&#34;&gt;
+  &lt;div id=&#34;reply-118707&#34; data-floor=&#34;7&#34;&gt;
+      &lt;div class=&#34;avatar&#34;&gt;&lt;a title=&#34;shaolimin (我问问)&#34; href=&#34;/shaolimin&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/18122/1918ab.jpg!md&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
+      &lt;div class=&#34;infos&#34;&gt;
+        &lt;div class=&#34;info&#34;&gt;
+          &lt;span class=&#34;name&#34;&gt;
+            &lt;a class=&#34;user-name&#34; data-name=&#34;我问问&#34; href=&#34;/shaolimin&#34;&gt;shaolimin&lt;/a&gt;
+          &lt;/span&gt;
+          &lt;span class=&#34;sub-info&#34;&gt;
+            &lt;span class=&#39;floor&#39;&gt;#7&lt;/span&gt; ·
+            &lt;a class=&#34;time&#34; href=&#34;#reply-118707&#34;&gt;&lt;abbr class=&#34;timeago&#34; title=&#34;2018-08-23T10:43:06+08:00&#34; rel=&#34;twipsy&#34;&gt;2018年08月23日&lt;/abbr&gt;&lt;/a&gt;
+          &lt;/span&gt;
+
+
+          &lt;span class=&#34;opts  pull-right&#34;&gt;
+              &lt;span class=&#34;hideable&#34;&gt;
+              &lt;a class=&#34;edit fa fa-pencil&#34; data-uid=&#34;18122&#34; title=&#34;修改回帖&#34; href=&#34;/topics/15768/replies/118707/edit&#34;&gt;&lt;/a&gt;
+
+                &lt;a data-uid=&#34;7606&#34; class=&#34;suggest&#34; title=&#34;设为最佳回复&#34; data-remote=&#34;true&#34; rel=&#34;nofollow&#34; data-method=&#34;post&#34; href=&#34;/topics/15768/replies/118707/reply_suggest&#34;&gt;&lt;i class=&#39;fa fa-check&#39;&gt;&lt;/i&gt;&lt;/a&gt;
+
+              &lt;a data-id=&#34;118707&#34; data-login=&#34;shaolimin&#34; title=&#34;回复此楼&#34; class=&#34;btn-reply fa fa-mail-reply&#34; href=&#34;#&#34;&gt;&lt;/a&gt;
+              &lt;/span&gt;
+              &lt;a title=&#34;赞&#34; data-count=&#34;0&#34; data-state=&#34;deactive&#34; data-type=&#34;Reply&#34; data-id=&#34;118707&#34; class=&#34;likeable deactive&#34; href=&#34;#&#34;&gt;&lt;i class=&#39;fa fa-heart&#39;&gt;&lt;/i&gt; &lt;span&gt;&lt;/span&gt;&lt;/a&gt;
+          &lt;/span&gt;
+        &lt;/div&gt;
+        
+        &lt;div class=&#34;markdown&#34;&gt;
+          &lt;p&gt;学习了，正对项目代码进行重构，&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;reply&#34; data-id=&#34;118722&#34; id=&#34;reply8&#34;&gt;
+  &lt;div id=&#34;reply-118722&#34; data-floor=&#34;8&#34;&gt;
+      &lt;div class=&#34;avatar&#34;&gt;&lt;a title=&#34;layasa (雨夜狂奔)&#34; href=&#34;/layasa&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/19137/afc1d4.jpg!md&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
+      &lt;div class=&#34;infos&#34;&gt;
+        &lt;div class=&#34;info&#34;&gt;
+          &lt;span class=&#34;name&#34;&gt;
+            &lt;a class=&#34;user-name&#34; data-name=&#34;雨夜狂奔&#34; href=&#34;/layasa&#34;&gt;layasa&lt;/a&gt;
+          &lt;/span&gt;
+          &lt;span class=&#34;sub-info&#34;&gt;
+            &lt;span class=&#39;floor&#39;&gt;#8&lt;/span&gt; ·
+            &lt;a class=&#34;time&#34; href=&#34;#reply-118722&#34;&gt;&lt;abbr class=&#34;timeago&#34; title=&#34;2018-08-23T11:20:59+08:00&#34; rel=&#34;twipsy&#34;&gt;2018年08月23日&lt;/abbr&gt;&lt;/a&gt;
+          &lt;/span&gt;
+
+
+          &lt;span class=&#34;opts  pull-right&#34;&gt;
+              &lt;span class=&#34;hideable&#34;&gt;
+              &lt;a class=&#34;edit fa fa-pencil&#34; data-uid=&#34;19137&#34; title=&#34;修改回帖&#34; href=&#34;/topics/15768/replies/118722/edit&#34;&gt;&lt;/a&gt;
+
+                &lt;a data-uid=&#34;7606&#34; class=&#34;suggest&#34; title=&#34;设为最佳回复&#34; data-remote=&#34;true&#34; rel=&#34;nofollow&#34; data-method=&#34;post&#34; href=&#34;/topics/15768/replies/118722/reply_suggest&#34;&gt;&lt;i class=&#39;fa fa-check&#39;&gt;&lt;/i&gt;&lt;/a&gt;
+
+              &lt;a data-id=&#34;118722&#34; data-login=&#34;layasa&#34; title=&#34;回复此楼&#34; class=&#34;btn-reply fa fa-mail-reply&#34; href=&#34;#&#34;&gt;&lt;/a&gt;
+              &lt;/span&gt;
+              &lt;a title=&#34;赞&#34; data-count=&#34;0&#34; data-state=&#34;deactive&#34; data-type=&#34;Reply&#34; data-id=&#34;118722&#34; class=&#34;likeable deactive&#34; href=&#34;#&#34;&gt;&lt;i class=&#39;fa fa-heart&#39;&gt;&lt;/i&gt; &lt;span&gt;&lt;/span&gt;&lt;/a&gt;
+          &lt;/span&gt;
+        &lt;/div&gt;
+        
+        &lt;div class=&#34;markdown&#34;&gt;
+          &lt;p&gt;学习了，确实高级&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;reply&#34; data-id=&#34;118737&#34; id=&#34;reply9&#34;&gt;
+  &lt;div id=&#34;reply-118737&#34; data-floor=&#34;9&#34;&gt;
+      &lt;div class=&#34;avatar&#34;&gt;&lt;a title=&#34;BensonMax (星)&#34; href=&#34;/BensonMax&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/21427/df8be6.jpg!md&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
+      &lt;div class=&#34;infos&#34;&gt;
+        &lt;div class=&#34;info&#34;&gt;
+          &lt;span class=&#34;name&#34;&gt;
+            &lt;a class=&#34;user-name&#34; data-name=&#34;星&#34; href=&#34;/BensonMax&#34;&gt;BensonMax&lt;/a&gt;
+          &lt;/span&gt;
+          &lt;span class=&#34;sub-info&#34;&gt;
+            &lt;span class=&#39;floor&#39;&gt;#9&lt;/span&gt; ·
+            &lt;a class=&#34;time&#34; href=&#34;#reply-118737&#34;&gt;&lt;abbr class=&#34;timeago&#34; title=&#34;2018-08-23T12:08:55+08:00&#34; rel=&#34;twipsy&#34;&gt;2018年08月23日&lt;/abbr&gt;&lt;/a&gt;
+          &lt;/span&gt;
+
+
+          &lt;span class=&#34;opts  pull-right&#34;&gt;
+              &lt;span class=&#34;hideable&#34;&gt;
+              &lt;a class=&#34;edit fa fa-pencil&#34; data-uid=&#34;21427&#34; title=&#34;修改回帖&#34; href=&#34;/topics/15768/replies/118737/edit&#34;&gt;&lt;/a&gt;
+
+                &lt;a data-uid=&#34;7606&#34; class=&#34;suggest&#34; title=&#34;设为最佳回复&#34; data-remote=&#34;true&#34; rel=&#34;nofollow&#34; data-method=&#34;post&#34; href=&#34;/topics/15768/replies/118737/reply_suggest&#34;&gt;&lt;i class=&#39;fa fa-check&#39;&gt;&lt;/i&gt;&lt;/a&gt;
+
+              &lt;a data-id=&#34;118737&#34; data-login=&#34;BensonMax&#34; title=&#34;回复此楼&#34; class=&#34;btn-reply fa fa-mail-reply&#34; href=&#34;#&#34;&gt;&lt;/a&gt;
+              &lt;/span&gt;
+              &lt;a title=&#34;赞&#34; data-count=&#34;0&#34; data-state=&#34;deactive&#34; data-type=&#34;Reply&#34; data-id=&#34;118737&#34; class=&#34;likeable deactive&#34; href=&#34;#&#34;&gt;&lt;i class=&#39;fa fa-heart&#39;&gt;&lt;/i&gt; &lt;span&gt;&lt;/span&gt;&lt;/a&gt;
+          &lt;/span&gt;
+        &lt;/div&gt;
+        
+        &lt;div class=&#34;markdown&#34;&gt;
+          &lt;p&gt;从零开始学设计模式，感谢飞哥的分享。 准备用python 实现&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;reply reply-system&#34; data-id=&#34;118951&#34; id=&#34;reply10&#34;&gt;
+  &lt;div id=&#34;reply-118951&#34; data-floor=&#34;10&#34;&gt;
+      &lt;a title=&#34;debugtalk (九毫)&#34; href=&#34;/debugtalk&#34;&gt;&lt;img class=&#34;media-object avatar-16&#34; src=&#34;/uploads/user/avatar/6109.jpg!xs&#34; /&gt;&lt;/a&gt; &lt;a class=&#34;user-name&#34; data-name=&#34;九毫&#34; href=&#34;/debugtalk&#34;&gt;debugtalk&lt;/a&gt;
+在
+&lt;span class=&#39;topic&#39;&gt;
+  &lt;a title=&#34;线上第六期_HttpRunner 基础课程_20180825&#34; href=&#34;/topics/15839&#34;&gt;线上第六期_HttpRunner 基础课程_20180825&lt;/a&gt;
+&lt;/span&gt; 中提及了此贴
+
+&lt;span class=&#39;time&#39;&gt;08月26日 12:11&lt;/span&gt;
+
+
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;reply&#34; data-id=&#34;118998&#34; id=&#34;reply11&#34;&gt;
+  &lt;div id=&#34;reply-118998&#34; data-floor=&#34;11&#34;&gt;
+      &lt;div class=&#34;avatar&#34;&gt;&lt;a title=&#34;ma499054390 (威)&#34; href=&#34;/ma499054390&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;https://testerhome.com/system/letter_avatars/2/M/254_218_16/96.png&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
+      &lt;div class=&#34;infos&#34;&gt;
+        &lt;div class=&#34;info&#34;&gt;
+          &lt;span class=&#34;name&#34;&gt;
+            &lt;a class=&#34;user-name&#34; data-name=&#34;威&#34; href=&#34;/ma499054390&#34;&gt;ma499054390&lt;/a&gt;
+          &lt;/span&gt;
+          &lt;span class=&#34;sub-info&#34;&gt;
+            &lt;span class=&#39;floor&#39;&gt;#11&lt;/span&gt; ·
+            &lt;a class=&#34;time&#34; href=&#34;#reply-118998&#34;&gt;&lt;abbr class=&#34;timeago&#34; title=&#34;2018-08-27T10:38:28+08:00&#34; rel=&#34;twipsy&#34;&gt;2018年08月27日&lt;/abbr&gt;&lt;/a&gt;
+          &lt;/span&gt;
+
+
+          &lt;span class=&#34;opts  pull-right&#34;&gt;
+              &lt;span class=&#34;hideable&#34;&gt;
+              &lt;a class=&#34;edit fa fa-pencil&#34; data-uid=&#34;25591&#34; title=&#34;修改回帖&#34; href=&#34;/topics/15768/replies/118998/edit&#34;&gt;&lt;/a&gt;
+
+                &lt;a data-uid=&#34;7606&#34; class=&#34;suggest&#34; title=&#34;设为最佳回复&#34; data-remote=&#34;true&#34; rel=&#34;nofollow&#34; data-method=&#34;post&#34; href=&#34;/topics/15768/replies/118998/reply_suggest&#34;&gt;&lt;i class=&#39;fa fa-check&#39;&gt;&lt;/i&gt;&lt;/a&gt;
+
+              &lt;a data-id=&#34;118998&#34; data-login=&#34;ma499054390&#34; title=&#34;回复此楼&#34; class=&#34;btn-reply fa fa-mail-reply&#34; href=&#34;#&#34;&gt;&lt;/a&gt;
+              &lt;/span&gt;
+              &lt;a title=&#34;赞&#34; data-count=&#34;0&#34; data-state=&#34;deactive&#34; data-type=&#34;Reply&#34; data-id=&#34;118998&#34; class=&#34;likeable deactive&#34; href=&#34;#&#34;&gt;&lt;i class=&#39;fa fa-heart&#39;&gt;&lt;/i&gt; &lt;span&gt;&lt;/span&gt;&lt;/a&gt;
+          &lt;/span&gt;
+        &lt;/div&gt;
+        
+        &lt;div class=&#34;markdown&#34;&gt;
+          &lt;p&gt;感谢分享&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;panel panel-default&#34;&gt;
+      &lt;div class=&#34;panel-body&#34;&gt;
+        &lt;div id=&#34;reply&#34; class=&#34;form box&#34;&gt;
+  &lt;div style=&#34;padding:20px;&#34; data-turbolinks-action=&#34;replace&#34;&gt;
+    需要 &lt;a class=&#34;btn btn-primary&#34; href=&#34;/account/sign_in&#34;&gt;登录&lt;/a&gt; 后方可回复, 如果你还没有账号请点击这里 &lt;a class=&#34;btn btn-danger&#34; href=&#34;/account/sign_up&#34;&gt;注册&lt;/a&gt;。
+  &lt;/div&gt;
+&lt;/div&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  
+    &lt;div class=&#34;panel panel-default&#34;&gt;
+      &lt;div class=&#34;panel-heading&#34;&gt;相关话题&lt;/div&gt;
+      &lt;ul class=&#34;list-group&#34;&gt;
+        &lt;li class=&#34;list-group-item&#34;&gt;&lt;/li&gt;
+          &lt;li class=&#34;list-group-item&#34;&gt;&lt;a href=&#34;/topics/15540&#34;&gt;测试开发之路--UI 自动化设计军规&lt;/a&gt;&lt;/li&gt;
+          &lt;li class=&#34;list-group-item&#34;&gt;&lt;a href=&#34;/topics/4861&#34;&gt;测试开发之路----可读性，可维护性，可扩展性&lt;/a&gt;&lt;/li&gt;
+          &lt;li class=&#34;list-group-item&#34;&gt;&lt;a href=&#34;/topics/11785&#34;&gt;深度学习基础 (十三)--演讲稿: 机器学习服务的测试探索&lt;/a&gt;&lt;/li&gt;
+          &lt;li class=&#34;list-group-item&#34;&gt;&lt;a href=&#34;/topics/14693&#34;&gt;深度学习基础 (二十五)-- tensorflow serving&lt;/a&gt;&lt;/li&gt;
+          &lt;li class=&#34;list-group-item&#34;&gt;&lt;a href=&#34;/topics/14578&#34;&gt;深度学习基础 (二十四)-- tensorflow 中的数据流&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+  &lt;div class=&#34;sidebar hidden-mobile col-md-3&#34;&gt;
+    
+    &lt;div id=&#34;topic-author-info&#34; class=&#34;panel profile panel-default&#34;&gt;
+  &lt;div class=&#34;panel-heading&#34;&gt;作者&lt;/div&gt;
+  &lt;div class=&#34;panel-body&#34;&gt;
+    &lt;div class=&#34;media&#34;&gt;
+      &lt;div class=&#34;avatar media-left&#34;&gt;
+        &lt;div class=&#39;image&#39;&gt;&lt;a title=&#34;ycwdaaaa (孙高飞)&#34; href=&#34;/ycwdaaaa&#34;&gt;&lt;img class=&#34;media-object avatar-48&#34; src=&#34;/uploads/user/avatar/7606.jpg!md&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
+        &lt;div class=&#34;level&#34;&gt;&lt;span class=&#34;label label-success role&#34;&gt;高级会员&lt;/span&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;media-body&#34;&gt;
+        &lt;div class=&#34;item&#34;&gt;
+          ycwdaaaa (孙高飞)
+        &lt;/div&gt;
+        &lt;div class=&#34;item number&#34;&gt;
+          第 7606 位会员 / &lt;span title=&#34;注册日期&#34;&gt;2016-02-29&lt;/span&gt;
+        &lt;/div&gt;
+            &lt;div class=&#34;item company&#34;&gt;
+              第四范式
+               @ &lt;span title=&#34;所在地&#34;&gt;&lt;a href=&#34;/users/city/%E5%8C%97%E4%BA%AC&#34;&gt;北京&lt;/a&gt;&lt;/span&gt;
+            &lt;/div&gt;
+      &lt;/div&gt;
+
+
+              &lt;div class=&#34;user-teams&#34;&gt;
+                &lt;div&gt;
+                      &lt;a title=&#34;hogwarts (霍格沃兹测试学院)&#34; href=&#34;/hogwarts&#34;&gt;&lt;img class=&#34;media-object avatar-32&#34; src=&#34;/uploads/team/avatar/12964/5d1cc3.png!sm&#34; /&gt;&lt;/a&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+    &lt;/div&gt;
+
+        &lt;div class=&#34;tagline row&#34;&gt;
+          为了部落
+        &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div id=&#34;topic-sidebar&#34;&gt;
+  &lt;div class=&#34;panel panel-default&#34;&gt;
+    &lt;div class=&#34;panel-body&#34;&gt;
+      &lt;a href=&#34;#&#34; class=&#34;btn btn-block btn-sm btn-move-page&#34; data-type=&#34;top&#34;&gt;&lt;i class=&#34;fa fa-arrow-up&#34;&gt;&lt;/i&gt;&lt;/a&gt;
+      &lt;div class=&#34;buttons&#34;&gt;
+        &lt;div class=&#34;group likes opts&#34;&gt;
+          &lt;a title=&#34;赞&#34; data-count=&#34;24&#34; data-state=&#34;deactive&#34; data-type=&#34;Topic&#34; data-id=&#34;15768&#34; class=&#34;likeable deactive&#34; href=&#34;#&#34;&gt;&lt;i class=&#39;fa fa-heart&#39;&gt;&lt;/i&gt; &lt;span&gt;24 个赞&lt;/span&gt;&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;group&#34;&gt;
+          &lt;div class=&#34;btn-group&#34; role=&#34;group&#34;&gt;
+            
+            
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;hr /&gt;
+      &lt;div class=&#34;group&#34;&gt;
+        &lt;div class=&#39;social-share-button&#39; data-title=&#39;测试开发之路--UI 自动化常用设计模式&#39; data-img=&#39;&#39;
+data-url=&#39;&#39; data-desc=&#39;&#39; data-via=&#39;&#39;&gt;
+&lt;a rel=&#34;nofollow &#34; data-site=&#34;twitter&#34; class=&#34;ssb-icon ssb-twitter&#34; onclick=&#34;return SocialShareButton.share(this);&#34; title=&#34;分享到 Twitter&#34; href=&#34;#&#34;&gt;&lt;/a&gt;
+&lt;a rel=&#34;nofollow &#34; data-site=&#34;wechat&#34; class=&#34;ssb-icon ssb-wechat&#34; onclick=&#34;return SocialShareButton.share(this);&#34; title=&#34;分享到 微信&#34; data-wechat-footer=&#34;打开微信，点击底部的 “发现”，&amp;lt;br/&amp;gt; 使用 “扫一扫” 即可将网页分享至朋友圈。&#34; href=&#34;#&#34;&gt;&lt;/a&gt;
+&lt;a rel=&#34;nofollow &#34; data-site=&#34;facebook&#34; class=&#34;ssb-icon ssb-facebook&#34; onclick=&#34;return SocialShareButton.share(this);&#34; title=&#34;分享到 Facebook&#34; href=&#34;#&#34;&gt;&lt;/a&gt;
+&lt;a rel=&#34;nofollow &#34; data-site=&#34;google_plus&#34; class=&#34;ssb-icon ssb-google_plus&#34; onclick=&#34;return SocialShareButton.share(this);&#34; title=&#34;分享到 Google+&#34; href=&#34;#&#34;&gt;&lt;/a&gt;
+&lt;a rel=&#34;nofollow &#34; data-site=&#34;weibo&#34; class=&#34;ssb-icon ssb-weibo&#34; onclick=&#34;return SocialShareButton.share(this);&#34; title=&#34;分享到 新浪微博&#34; href=&#34;#&#34;&gt;&lt;/a&gt;
+&lt;a rel=&#34;nofollow &#34; data-site=&#34;douban&#34; class=&#34;ssb-icon ssb-douban&#34; onclick=&#34;return SocialShareButton.share(this);&#34; title=&#34;分享到 豆瓣&#34; href=&#34;#&#34;&gt;&lt;/a&gt;
+&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;hr /&gt;
+      &lt;div class=&#34;reply-buttons&#34;&gt;
+        &lt;div class=&#34;total&#34;&gt;
+          共收到 &lt;b&gt;9&lt;/b&gt; 条回复
+        &lt;/div&gt;
+        &lt;a class=&#34;btn btn-success&#34; data-remote=&#34;true&#34; href=&#34;/ycwdaaaa/reward&#34;&gt;&lt;i class=&#39;fa fa-qrcode&#39;&gt;&lt;/i&gt; &lt;span&gt;打赏支持&lt;/span&gt;&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;hr /&gt;
+      &lt;div class=&#34;group opts&#34;&gt;
+
+      &lt;/div&gt;
+      &lt;a href=&#34;#&#34; class=&#34;btn btn-block btn-move-page&#34; data-type=&#34;bottom&#34;&gt;&lt;i class=&#34;fa fa-arrow-down&#34;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&#34;notify-updated&#34;&gt;
+    &lt;a class=&#34;update&#34; href=&#34;#&#34;&gt;&lt;i class=&#34;fa fa-bell-o&#34;&gt;&lt;/i&gt; &lt;b&gt;有新回复！&lt;/b&gt;点击这里立即载入&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+  &lt;/div&gt;
+
+  &lt;footer class=&#34;footer&#34; id=&#34;footer&#34; data-turbolinks-permanent&gt;
+    &lt;div class=&#34;container&#34;&gt;
+      &lt;div class=&#34;row&#34;&gt;
+  &lt;div class=&#34;col-sm-9&#34;&gt;
+    &lt;div class=&#34;media&#34;&gt;
+      &lt;div class=&#34;media-left&#34;&gt;
+        &lt;img src=&#34;https://testerhome.com/uploads/photo/2016/274e7ebc8ad0db0b7e718fceea3628a9.png!large&#34; style=&#34;width:48px;&#34;&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;media-body&#34;&gt;
+
+        &lt;div class=&#34;links&#34;&gt;
+          &lt;a href=&#34;https://testerhome.com/wiki/about&#34;&gt;关于&lt;/a&gt; / 
+          &lt;a href=&#34;https://testerhome.com/users&#34;&gt;活跃用户&lt;/a&gt; / 
+          &lt;a href=&#34;http://test-china.org/&#34;  target=&#34;_blank&#34;&gt;中国移动互联网测试技术大会&lt;/a&gt; / 
+          &lt;a href=&#34;/topics/node13&#34;&gt;反馈&lt;/a&gt; / 
+          &lt;a href=&#34;https://github.com/testerhome&#34;&gt;Github&lt;/a&gt; / 
+          &lt;a href=&#34;https://testerhome.com//api-doc/&#34;&gt;API&lt;/a&gt; /  
+          &lt;a href=&#34;https://testerhome.com/sites&#34;&gt;酷站&lt;/a&gt;  / 
+          &lt;a href=&#34;/wiki/spreadtesterhome&#34;&gt;帮助推广&lt;/a&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&#34;copyright&#34; style=&#34;font-size:14px; color:#9CA4A9;margin-top:0px;margin-bottom:5px&#34;&gt;
+          TesterHome 移动测试社区，由众多移动测试工作者维护，致力于推进国内测试技术。Inspired by RubyChina
+        &lt;/div&gt;
+&lt;div class=&#34;links&#34;  data-no-turbolink=&#34;&#34;&gt;
+&lt;span style=&#34;font-size:14px; color:#666;&#34;&gt;友情链接&lt;/span&gt;&lt;span style=&#34;margin-left:5px&#34;&gt;
+          &lt;a style=&#34;color:#317DDA;&#34; href=&#34;http://wetest.qq.com/?from=links_testerhome&#34; target=&#34;_blank&#34;&gt;WeTest腾讯质量开放平台&lt;/a&gt; / 
+          &lt;a style=&#34;color:#317DDA;&#34; href=&#34;http://www.infoq.com/cn&#34; target=&#34;_blank&#34;&gt;InfoQ&lt;/a&gt; / 
+          &lt;a style=&#34;color:#317DDA;&#34; href=&#34;http://www.testtao.com/portal.php&#34; target=&#34;_blank&#34;&gt;测试之道&lt;/a&gt; / 
+          &lt;a style=&#34;color:#317DDA;&#34; href=&#34;https://www.testwo.com/&#34; target=&#34;_blank&#34;&gt;测试窝&lt;/a&gt; / 
+          &lt;a style=&#34;color:#317DDA;&#34; href=&#34;http://tieba.baidu.com/f?ie=utf-8&amp;kw=%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95&amp;fr=search&#34; target=&#34;_blank&#34;&gt;百度测试吧&lt;/a&gt;
+&lt;/span&gt;
+    &lt;/div&gt;
+        &lt;div class=&#34;links&#34; style=&#34;margin-top:0px&#34; data-no-turbolink=&#34;&#34;&gt;
+          &lt;a href=&#34;?locale=zh-CN&#34; rel=&#34;nofollow&#34;&gt;简体中文&lt;/a&gt; / &lt;a href=&#34;?locale=zh-TW&#34; rel=&#34;nofollow&#34;&gt;正體中文&lt;/a&gt; / &lt;a href=&#34;?locale=en&#34;
+            rel=&#34;nofollow&#34;&gt;English&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;col-sm-3 friends&#34;&gt;
+    &lt;a href=&#34;http://www.ucloud.cn/?utm_source=zanzhu&amp;utm_campaign=testerhome&amp;utm_medium=display&amp;utm_content=yejiao&amp;ytag=testerhome_logo&#34;
+      target=&#34;_blank&#34; rel=&#34;twipsy&#34; style=&#34;display:inline-block;margin-right:5px;&#34; data-original-title=&#34;本站服务器由 Ucloud 赞助&#34;&gt;&lt;img src=&#34;https://testerhome.com/photo/2016/4ce97c93f9433f654884c4839408327a.png&#34; style=&#34;height:28px&#34;&gt;&lt;/a&gt;
+
+    &lt;a href=&#34;http://www.sendcloud.net/&#34;
+      target=&#34;_blank&#34; rel=&#34;twipsy&#34; style=&#34;display:inline-block;margin-right:5px;&#34; data-original-title=&#34;邮件服务由 SendCloud 赞助&#34;&gt;&lt;img src=&#34;https://testerhome.com/uploads/photo/2017/0f9fb5db-2472-4430-9f7e-6c051f28c3c9.png&#34; style=&#34;height:28px&#34;&gt;&lt;/a&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+    &lt;/div&gt;
+  &lt;/footer&gt;
+
+  &lt;script type=&#34;text/javascript&#34; data-turbolinks-eval=&#34;false&#34;&gt;
+    App.root_url = &#34;https://testerhome.com/&#34;;
+    App.asset_url = &#34;&#34;;
+    App.twemoji_url = &#34;https://twemoji.b0.upaiyun.com/2&#34;;
+    App.locale = &#34;zh-CN&#34;;
+  &lt;/script&gt;
+    &lt;script type=&#34;text/javascript&#34;&gt;
+    Topics.topic_id = 15768;
+    $(document).ready(function(){
+
+    })
+  &lt;/script&gt;
+
+  &lt;script&gt;
+    ga(&#39;create&#39;, &#39;UA-45014075-1&#39;, &#39;auto&#39;);
+    ga(&#39;require&#39;, &#39;displayfeatures&#39;);
+    ga(&#39;send&#39;, &#39;pageview&#39;);
+  &lt;/script&gt;
+  &lt;div class=&#34;zoom-overlay&#34;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>X-Request-Id</strong>: 3834dc08-fc0c-48a5-914c-ecbc5e08c600
+                            </div>
+                            
+                            <div>
+                              <strong>X-XSS-Protection</strong>: 1; mode=block
+                            </div>
+                            
+                            <div>
+                              <strong>X-Download-Options</strong>: noopen
+                            </div>
+                            
+                            <div>
+                              <strong>X-Content-Type-Options</strong>: nosniff
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Encoding</strong>: gzip
+                            </div>
+                            
+                            <div>
+                              <strong>Transfer-Encoding</strong>: chunked
+                            </div>
+                            
+                            <div>
+                              <strong>Set-Cookie</strong>: _homeland_session=OEYSlFhmT4n3vkBs2Hv3D28FG8ZkJo98cSt17gxUGUpeqgtYUSRQ%2B%2FP6ku6VNXzsQOgTdn5lZrt%2BKGtgkA5VaOIwYsJwZmbmgfTTqNfrv7u%2FZBmGPZxjTKWB7UKJ6T9xkgUSwZZgll4P550NjAKAoA3aqUq3JD41dXTyErZ3Diu0tNhOexz%2F16U443gY7rufmhK%2BUpqa6%2FC6Pn0u7TlBRxWeFM61ORjhnfntMhLJtT4appqFWt%2FnUokCX5IJs%2BJHXniCrvdlyHhk9bujuM%2FpsqY7VLMOYiWuJA%3D%3D--x%2BIW8PBMaq%2BwKd16--It2uTSuiFCtaebxSbYbhQA%3D%3D; path=/; expires=Sun, 25 Nov 2018 10:18:56 -0000; secure; HttpOnly
+                            </div>
+                            
+                            <div>
+                              <strong>Strict-Transport-Security</strong>: max-age=15552000; includeSubDomains
+                            </div>
+                            
+                            <div>
+                              <strong>Vary</strong>: Accept-Encoding
+                            </div>
+                            
+                            <div>
+                              <strong>X-Runtime</strong>: 0.052816
+                            </div>
+                            
+                            <div>
+                              <strong>Server</strong>: nginx/1.10.2
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Security-Policy</strong>: ;
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                            <div>
+                              <strong>ETag</strong>: W/"ff8e46b3b709661df4bbb6ae7127c546"
+                            </div>
+                            
+                            <div>
+                              <strong>X-Permitted-Cross-Domain-Policies</strong>: none
+                            </div>
+                            
+                            <div>
+                              <strong>Cache-Control</strong>: max-age=0, private, must-revalidate
+                            </div>
+                            
+                            <div>
+                              <strong>Date</strong>: Mon, 27 Aug 2018 10:18:56 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>X-Frame-Options</strong>: SAMEORIGIN
+                            </div>
+                            
+                            <div>
+                              <strong>Referrer-Policy</strong>: strict-origin-when-cross-origin
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: text/html; charset=utf-8
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      
+                        
+                      
+                        
+                      
+                        
+                  </table>
+              </div>
+
+              <h3>Validators:</h3>
+              <div style="overflow: auto">
+                  <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>eq</td>
+                      <td>200</td>
+                      <td>200</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        headers.Content-Type
+                      </td>
+                      <td>eq</td>
+                      <td>text/html; charset=utf-8</td>
+                      <td>text/html; charset=utf-8</td>
+                    </tr>
+                    
+                  </table>
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>63229</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>153.37</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>107.916</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        
+          <a class="button" href="#popup_attachment_1_2">traceback</a>
+          <div id="popup_attachment_1_2" class="overlay">
+            <div class="popup">
+              <h2>Traceback Message</h2>
+              <a class="close" href="#record_1_2">&times;</a>
+              <div class="content"><pre>Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/httprunner/utils.py", line 264, in test
+    test_runner.run_test(teststep_dict)
+  File "/usr/local/lib/python2.7/site-packages/httprunner/runner.py", line 211, in run_test
+    extracted_variables_mapping = resp_obj.extract_response(extractors)
+  File "/usr/local/lib/python2.7/site-packages/httprunner/response.py", line 227, in extract_response
+    extracted_variables_mapping[key] = self.extract_field(field)
+  File "/usr/local/lib/python2.7/site-packages/httprunner/response.py", line 193, in extract_field
+    msg = "extract: {}".format(field)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 39-40: ordinal not in range(128)
+</pre></div>
+            </div>
+          </div>
+        
+
+      </td>
+    </tr>
+  
+  </table>
+  
+</body>
